@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tabledemo</title>
+</head>
+<body>
+    <table border="1">  <!--border邊框-->
+        <thead>
+            <tr>      <!--table row-->
+                <th>姓名</th> 
+                <th>年齡</th> 
+                <th>電話</th> 
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>阿明</td>
+                <td>18</td>
+                <td>456789</td>
+            </tr>
+            <tr>
+                <td>小美</td>
+                <td>20</td>
+                <td>432159</td>
+            </tr>
+            <tr>
+                <td rowspan="2">平均年齡</td>  <!--rowspan="2"合併2個行-->
+                <td colspan="2">19</td>       <!--colspan="2"合併2個列-->
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>456</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
