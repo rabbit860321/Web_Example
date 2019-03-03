@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表單綜合練習</title>
+</head>
+<body>
+    <h1>新建通訊錄</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <td>姓名</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>電話</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>電話類型</td>
+                <td>
+                    <input type="radio" name="ph" id="ph_1">
+                    <label for="ph_1">手機</label>
+                    <input type="radio" name="ph" id="ph_2">
+                    <label for="ph_1">室內</label>
+                </td>
+            </tr>
+            <tr>
+                <td>公開給</td>
+                <td>
+                    <input type="checkbox" name="ck_private" id="ck_private">
+                    <label for="ck_private">私有朋友</label>
+                    <input type="checkbox" name="ck_public" id="ck_public">
+                    <label for="ck_public">陌生人</label>
+                </td>
+            </tr>
+            <tr>
+                <td>城市</td>
+                <td><select>
+                    <option value="1">高雄</option>
+                    <option value="2">台南</option>
+                    <option value="3">台中</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>備註</td>
+                <td><textarea cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="新建">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
