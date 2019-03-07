@@ -7,19 +7,21 @@
     <title>cssDemo</title>
 
     <!--嵌入樣式 頁內樣式-->
+    <!--頁內所有的<p>標籤都會套用-->
     <style>    
         p {    
             color: yellow;
         }
     </style>
 
+    <!--外部樣式-->
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <!--內聯樣式-->
     <!--css語法結構: 屬性名:屬性值-->
     <!--div標籤裡的都會套用此style-->
-    <div style="color:red; font-size: 24px; border: 1px solid black">  
+    <div style="color:red; font-size: 24px; border: 1px solid black;">  
         我是div
     </div>
 
