@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>複合選擇器</title>
+
+    <style>
+        li.current {
+            background-color:lightblue;
+        }
+        li#sport {
+            font-weight: bold;
+        }
+        .news li a {         /*class="news" 裡的所有的li標籤,a標籤都設置*/
+            color:lightcoral
+        }
+        .hot a, .dif a {      /*class="hot"裡的a標籤 和 class="dif"裡的a標籤都設置*/
+            color:lightgreen;
+        }
+
+        html, body, div, dt, dl, dd, ul, p {
+            padding: 0;  /*內邊距*/
+            margin: 0;   /*外邊距*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="current"><a href="#">焦點</a></li>
+        <li id="sport"><a href="#">運動</a></li>
+        <li><a href="#">娛樂</a></li>
+        <li><a href="#">FUN</a></li>
+        <li><a href="#">生活</a></li>
+        <li><a href="#">影音</a></li>
+    </ul>
+
+    <ul class="news">
+        <li><a href="#">才剛慶生完！姊返飯店見弟嘴角流血沫暴斃</a></li>
+        <li><a href="#">下波冷氣團要來了！大雨3天再凍12度 最冷在這時</a></li>
+        <li><a href="#">85億元差點掰了！失業男彩券失而復得中頭獎</a></li>
+    </ul>
+
+    <dl class="hot">
+        <dt><a href="#">熱門</a></dt>
+        <dd><a href="#">「癌王」元兇找到了！常吃這食品害的</a></dd>
+        <dd><a href="#">沒婚變！宋仲基左手婚戒「戴得閃亮」</a></dd>
+        <dd><a href="#">郭宗坤血塊掉大腿！醫師：恐腦中風…</a></dd>
+    </dl>
+
+    <dl class="dif">
+        <dt><a href="#">新奇</a></dt>
+        <dd><a href="#">醉男為躲酒駕 竟自創「吃草醒酒法」</a></dd>
+        <dd><a href="#">3年拼減肥、學化妝 大臉普妹竟成…</a></dd>
+        <dd><a href="#">全班唯一女生成班寵 男生集體送禮</a></dd>
+    </dl>
+</body>
+</html>
