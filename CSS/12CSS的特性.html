@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS的特性:層疊 繼承</title>
+    <style>
+        p {
+            color:darkgreen;
+        }
+        p {
+            color:darkgrey;
+        }
+        a {
+            color:inherit;
+        }
+        /*繼承性: 父容器設置的樣式 子容器也享有*/
+    </style>
+</head>
+<body>
+    <p>
+        楊耀仁，是我
+        <span>滑起來</span>
+        <a href="#">123</a>
+    </p>
+    <span>滑起來</span>
+</body>
+</html>

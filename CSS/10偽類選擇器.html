@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>偽類選擇器</title>
+    <style>
+        a:link {
+            color:darkred;
+        }
+        a:visited {
+            /*被點擊過的超連結*/
+            color:darksalmon;
+        }
+        a:hover {
+            /*鼠標懸停*/
+            color: black;
+            background-color: aqua;
+        }
+        a:active {
+            /*按下*/
+            color:dodgerblue;
+        }
+        /*順序LoVe HAte原則*/
+
+        input:focus {
+            /*獲取到焦點時*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">首頁</a>
+    <a href="#">產品</a>
+    <a href="/">新聞</a>
+
+    <input type="text">
+</body>
+</html>

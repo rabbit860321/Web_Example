@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>屬性選擇器</title>
+    <style>
+        span[class] {
+            /*擁有class屬性的span標籤*/
+            color:gray;
+        }
+        [id] {
+            /*擁有id屬性的所有標籤*/
+            font-size: 50px;
+        }
+        span[id="4"]{
+            /*id屬性=4的span標籤*/
+            color:greenyellow;
+        }
+        span[class~="demo"]{
+            /*class屬性包含"demo"*/
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <span class="cur demo">1</span>
+        <span>2</span>
+        <span id="3">3</span>
+        <span id="4">4</span>
+        <span>5</span>
+    </p>
+</body>
+
+</html>

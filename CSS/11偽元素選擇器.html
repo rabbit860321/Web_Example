@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>偽元素選擇器</title>
+    <style>
+        /*必須是span 是第一個子元素*/
+        span:first-child {
+            color: red;
+            font-size: 50px;
+        }
+
+        /*段落的首個字符*/
+        p::first-letter {
+            font-size: 50px;
+            color: aqua;
+        }
+
+        p::first-line {
+            color:blueviolet;
+        }
+
+        #temp::before {
+            content: "============";
+        }
+        #temp::after {
+            content: "-------------";
+        }
+    </style>
+</head>
+
+<body>
+    <div id="temp">
+        <span>大</span>
+        <span>中</span>
+        <span>小</span>
+    </div>
+
+    <p>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </p>
+
+    <p>韓流效應讓六合夜市人氣增溫，但恐怕只好到攤商，攤位後方的許多店面不是高掛出租就是出售，甚至有店面大降3千萬求售，另新崛江商圈店面也是如此，中山一路捷運中央公園站出口旁短短130公尺就有6家高掛出租或出售，出現租售一條街景象。
+    </p>
+</body>
+
+</html>
