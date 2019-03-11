@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display屬性</title>
+    <style>
+        .par {
+            /*當前標籤 從文檔流中移除*/
+            display: none;
+        }
+
+        .b-s {
+            display: block;
+        }
+
+        #sp {
+            background-color: green;
+            display: inline-block;
+            width: 100px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="par">
+        【ZS-382E】DAILY HELMET
+        通勤族最佳首選💯
+        輕便、舒適、高質感
+        好戴、好看、好拆洗
+        6種顏色供你搭配~
+    </div>
+
+    <span class="b-s">span1</span>
+    <p>
+        <span id="sp">span2</span>
+        <img src="./img/QQ.jpg" title="bang" alt="error" width="100"> <!--img 默認行內塊-->
+        <span>span3</span>
+    </p>
+</body>
+
+</html>
