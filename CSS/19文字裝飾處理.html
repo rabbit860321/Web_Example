@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字裝飾</title>
+    <style>
+        ul > li > a {
+            /* text-decoration文本裝飾 */
+            text-decoration: none;
+
+        }
+
+        p {
+            /* 下劃線 刪除線 */
+            text-decoration: underline line-through; 
+            /* 首行縮進(2字) */
+            text-indent: 2em;
+        }
+        p.pre-demo {
+            /* 照輸入空格輸出 */
+            white-space: pre;
+            text-decoration: none;
+        }
+        .p3 {
+            text-decoration: none;
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+
+            /* 不換行 */
+            white-space: nowrap;
+            /* 超出的移除 */
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- (ul>li>a[href=#])*3 -->
+    <ul>
+        <li><a href="#">【#2019奧斯卡】</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">再次重溫賭城首次合體表演的〈Shallow〉超感人~</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">*賺人熱淚《一個巨星的誕生》</a></li>
+    </ul>
+
+    <p>由日本 BANDAI SPIRITS 公司 HOBBY 事業部發行，搭配著最新技術、分件完整且高度可動的鋼普拉「MG（Master Grade）」系列今（13）日發表了出自《機動戰士鋼彈 逆襲的夏亞MSV》的最新商品「MG 1/100 Re-GZ 特裝型」預計於 2019 年 05 月發售的消息。</p>
+
+    <p class="class pre-demo">
+        var x = 10;
+        ver y = 10;
+            console.log(x+y);
+    </p>
+
+    <p class="p3">由日本 BANDAI SPIRITS 公司 HOBBY 事業部發行，搭配著最新技術、分件完整且高度可動的鋼普拉「MG（Master Grade）」系列今（13）日發表了出自《機動戰士鋼彈 逆襲的夏亞MSV》的最新商品「MG 1/100 Re-GZ 特裝型」預計於 2019 年 05 月發售的消息。</p>
+
+</body>
+</html>
