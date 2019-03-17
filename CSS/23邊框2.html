@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邊框</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+
+            /* 老馬老濕縮 推薦大家使用 效率高 簡潔 維護方便*/
+            border: 5px solid black;
+
+            border-width: 10px;
+            border-style: dotted;
+            border-color: red;
+
+            /* 老馬老濕縮 不建議使用 效率低 */
+            /* border-top-color: green;
+            border-bottom-width: 20px;
+            border-right-style: dashed;  */
+
+            /* 需求 上黃下綠左右黑 */
+            /* 三個參數: 上 左右 下 */
+            border-color: yellow black green;
+
+            /* 兩個參數: 上下 左右 */
+            border-color: cadetblue aqua;
+
+            /* 四個參數 上 右 下 左 */
+            border-color: blue salmon firebrick khaki;
+        }
+
+        table {
+            border: 2px solid hotpink;
+
+            /* 讓邊框摺疊 */
+            border-collapse: collapse; 
+        }
+
+        input {
+            /* 去掉邊框顏色 */
+            outline-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        FIN IN NATURE
+    </div> -->
+
+    <input type="text">
+
+    <table border="2">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>54</td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>87</td>
+        </tr>
+        <tr>
+            <td>989</td>
+            <td>44</td>
+        </tr>
+    </table>
+</body>
+</html>
