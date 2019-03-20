@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三列布局</title>
+    <style>
+        body, div {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid violet;
+        }
+
+        .head {
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .left {
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+
+            float: left;
+        }
+
+        .right {
+            width: 300px;
+            height: 500px;
+            background-color: coral;
+            float:right;
+        }
+
+        .main {
+            margin: 0 305px;
+        }
+
+        .foot {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">頂部</div>
+    <div class="left">左側</div>
+    <div class="right">右側</div>
+    <div class="main">中間</div>
+    <div class="foot">底部</div>
+</body>
+
+</html>
