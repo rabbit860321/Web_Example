@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相對定位</title>
+    <style>
+        body, div {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid firebrick;
+        }
+
+        .rl {
+            width: 200px;
+            height: 200px;
+            
+            /* 設置相對定位後 標籤的css就可以設置left right top bottom的css屬性 */
+            position: relative;
+
+            left: 10px;
+            top: 20px;
+        }
+
+        .ab {
+            width: 200px;
+            height: 200px;
+            background-color: darkturquoise;
+
+            position: absolute;
+            /* 絕對定位 根據父容器定位*/
+            left: 100px;
+            top: 30px;
+        }
+
+        .parent {
+            height: 400px;
+            width: 500px;
+            background-color: darkorchid;
+            /* 如果父容器設置了relative後 那麼子元素如果設置了absolute定位 
+            他的子元素就按照父容器進行絕對定位 
+            子絕父相*/
+            position: relative;
+        }
+
+        .f {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            height: 100px;
+            width: 100px;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rl">
+        落水狗。
+        今天一直在那邊給我偷喝海水，一回家立刻大吐特吐，氣死你老母
+    </div>
+
+    <div class="parent">
+        父容器
+        <div class="ab">
+                剛春酒回來，接著開台ㄅ
+                有個小喝水比賽拿到冠軍，我好猛喔嘻嘻
+                來分析個馬來西亞賽吧
+        </div>
+    </div>
+
+    <div class="f">
+        固定定位
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>閉合浮動</title>
+    <style>
+        body, div {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+
+        .f1 {
+            float: right;
+            height: 100px;
+            width: 100px;
+            background-color: darkkhaki;
+        }
+
+        .clearfix::after, .clearfix::before {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        .clearfix::after {
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clearfix">
+        <div class="f1">浮動的div</div>
+        陣營對抗的衝突，在艾澤拉斯大地上越演越烈
+        馬上徵招老兵回歸效命，您的陣營需要你！
+        從3/22號至3/25止，老兵回歸免遊戲時數
+        讓你暢玩整個周末！ 為了部落/聯盟！
+    </div>
+</body>
+
+</html>
