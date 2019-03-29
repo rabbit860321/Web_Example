@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yahoo奇摩</title>
+    <style>
+        body, div, ul, li{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font: 12px/20px "微軟正黑體";
+        }
+        ul, li {
+            /* 去掉列表默認的樣式 */
+            list-style: none;
+        }
+        a {
+            /* 底線去除 */
+            text-decoration: none;
+            color: white;
+        }
+        .tn {
+            background-color: #2d1152;
+            height: 26px;
+            line-height: 26px;
+        }
+        .serch {
+            margin: 0 auto;
+            border:1px solid black;
+            width: 1192px;
+            height: 94px;
+        }
+        
+        .tn-main {
+            /* 居中 */
+            margin: 0 auto;
+            width: 1192px;
+        }
+        .tn-nav-l {
+            float: left;
+        }
+        .tn-nav-l li {
+            float: left;
+            padding: 0 12.5px;
+        }
+        .tn-nav-l li a:hover{
+            text-decoration-line: underline;
+        }
+
+        .more a:hover {
+            /* 當懸停在更多時 */
+            background-color: white;
+            color: #2d1152;
+        }
+        .more:hover .more-box li{
+            display: block;
+        }
+        .more-box {
+            position: absolute;
+        }
+        .more-box li{
+            margin-left: -15px;
+            display: none;
+            float: none; 
+        }
+        .more-box li a {
+            color:#2d1152;
+        }
+
+        .tn-nav-r {
+            float: right;
+        }
+        .tn-nav-r li {
+            float: left;;
+            padding: 0 12.5px;
+        }
+        .tn-nav-r li a:hover{
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="tn">
+        <div class="tn-main">
+            <!-- 左側列表 -->
+            <ul class="tn-nav-l">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">信箱</a></li>
+                <li><a href="#">新聞</a></li>
+                <li><a href="#">股市</a></li>
+                <li><a href="#">氣象</a></li>
+                <li><a href="#">運動</a></li>
+                <li><a href="#">Yahoo TV</a></li>
+                <li><a href="#">娛樂</a></li>
+                <li><a href="#">購物中心</a></li>
+                <li><a href="#">商城</a></li>
+                <li><a href="#">拍賣</a></li>
+                <li class="more">
+                    <a href="#">更多ˇ</a>
+                    <ul class="more-box">
+                        <li><a href="#">知識+</a></li>
+                        <li><a href="#">汽車機車</a></li>
+                        <li><a href="#">電影</a></li>
+                        <li><a href="#">字典</a></li>
+                        <li><a href="#">遊戲</a></li>
+                        <li><a href="#">旅遊</a></li>
+                        <li><a href="#">理財</a></li>
+                        <li><a href="#">房地產</a></li>
+                        <li><a href="#">時尚美妝</a></li>
+                        <li><a href="#">3C科技</a></li>
+                        <li><a href="#">購划算</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- 右側列表 -->
+            <ul class="tn-nav-r">
+                <li><a href="#">設定Yahoo為首頁</a></li>
+                <li><a href="#">語言</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="serch"></div>
+</body>
+</html>
