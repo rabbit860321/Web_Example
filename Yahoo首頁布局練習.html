@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yahoo奇摩</title>
     <style>
-        body, div, ul, li{
+        body,
+        div,
+        ul,
+        li {
             padding: 0;
             margin: 0;
         }
+
         body {
             font: 12px/20px "微軟正黑體";
         }
-        ul, li {
+
+        ul,
+        li {
             /* 去掉列表默認的樣式 */
             list-style: none;
         }
-        a {
+
+        .tn-nav-l a ,.tn-nav-r a{
             /* 底線去除 */
             text-decoration: none;
             color: white;
         }
+
         .tn {
             background-color: #2d1152;
             height: 26px;
             line-height: 26px;
         }
+
         .serch {
             margin: 0 auto;
-            border:1px solid black;
+            margin-top: 17px;
             width: 1192px;
-            height: 94px;
+            height: 50px;
         }
-        
+
         .tn-main {
             /* 居中 */
             margin: 0 auto;
             width: 1192px;
         }
+
         .tn-nav-l {
             float: left;
         }
+
         .tn-nav-l li {
             float: left;
             padding: 0 12.5px;
         }
-        .tn-nav-l li a:hover{
+
+        .tn-nav-l li a:hover {
             text-decoration-line: underline;
         }
 
@@ -55,33 +68,153 @@
             background-color: white;
             color: #2d1152;
         }
-        .more:hover .more-box li{
+
+        .more:hover .more-box li {
             display: block;
         }
+
         .more-box {
+            border: 1px solid lightgray;
             position: absolute;
         }
-        .more-box li{
-            margin-left: -15px;
+
+        .more-box li {
+            margin-left: -10px;
             display: none;
-            float: none; 
+            float: none;
         }
+
         .more-box li a {
-            color:#2d1152;
+            color: #2d1152;
         }
 
         .tn-nav-r {
             float: right;
         }
+
         .tn-nav-r li {
-            float: left;;
+            float: left;
             padding: 0 12.5px;
         }
-        .tn-nav-r li a:hover{
+
+        .tn-nav-r li a:hover {
             text-decoration-line: underline;
+        }
+
+        .serch img {
+            width: 120px;
+            height: 50px;
+            float: left;
+        }
+
+        .serch #ser {
+            margin-left: 28px;
+            height: 50px;
+            width: 557px;
+            border: 1px solid lightgray;
+            float: left;
+        }
+
+        .serch #pen {
+            width: 15px;
+            height: 15px;
+            margin-left: 23px;
+            margin-top: 17px;
+        }
+
+        .ser-icon {
+            width: 80px;
+            height: 50px;
+            float: left;
+            background-color: #0f69ff;
+        }
+
+        .ser-icon #big {
+            width: 30px;
+            height: 27px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        .ser-r {
+            width: 306px;
+            height: 25px;
+            float: right;
+            margin-top: 17px;
+        }
+
+        .ser-r li {
+            float: left;
+            padding: 0 12.5px;
+        }
+
+        .ser-r #cloud_img {
+            height: 25px;
+            width: 30px;
+        }
+
+        .ser-r #user_img {
+            height: 25px;
+            width: 25px;
+        }
+
+        .ser-r #mail_img {
+            height: 25px;
+            width: 35px;
+        }
+
+        .main {
+            margin: 35px auto;
+            width: 1192px;
+            height: 756px;
+        }
+        .main .ln {
+            width: 195px;
+            height: 690px;
+            float:left;
+            margin-right: 10px;
+        }
+        .ull li ,.ulr li{
+            font: 14px/20px "微軟正黑體";
+            padding: 5px 0;
+        }
+        .main .ln a {
+            color: #1d1da3;
+            text-decoration: none;
+        }
+        .ull {
+            margin-left: 15px;
+            margin-top: 15px;
+            float:left;
+        }
+        .ulr{
+            margin-right: 30px;
+            margin-top: 15px; 
+            float: right;
+        }
+        .main_1 {
+            width: 636px;
+            height: 270px;
+            border: 1px solid lightgrey;
+            float:left;
+            margin-bottom: 15px;
+        }
+        .main_2 {
+            width: 636px;
+            height: 101px;
+            border: 1px solid lightgrey;
+            overflow: hidden;
+        }
+        .main_3 {
+            width: 636px;
+            height: 241px;
+            border: 1px solid lightgrey;
+            overflow: hidden;
+            margin-top: 18px;
         }
     </style>
 </head>
+
 <body>
     <div class="tn">
         <div class="tn-main">
@@ -123,6 +256,98 @@
         </div>
     </div>
 
-    <div class="serch"></div>
+    <div class="serch">
+        <img src="Yahoo_logo.png" alt="error">
+        <input type="search" name="" id="ser">
+        <div class="ser-icon">
+            <input type="image" src="big.png" alt="" id="big">
+        </div>
+        <input type="image" src="pencil.png" alt="" id="pen">
+        <div class="ser-r">
+            <ul>
+                <li>
+                    <img src="cloud.png" alt="error" id="cloud_img">
+                    台北
+                </li>
+                <li>
+                    <img src="user.png" alt="error" id="user_img">
+                    rabbit860321
+                </li>
+                <li>
+                    <img src="mail.png" alt="error" id="mail_img">
+                    信箱
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="ln">
+            <ul class="ull">
+                <li><a href="#">新聞</a></li>
+                <li><a href="#">股市</a></li>
+                <li><a href="#">理財</a></li>
+                <li><a href="#">運動</a></li>
+                <li><a href="#">中職</a></li>
+                <li><a href="#">名人娛樂</a></li>
+                <li><a href="#">電影</a></li>
+                <li><a href="#">Yahoo TV</a></li>
+                <li><a href="#">遊戲</a></li>
+                <li><a href="#">電競</a></li>
+                <li><a href="#">動漫</a></li>
+                <li><a href="#">字典</a></li>
+                <li><a href="#">知識+</a></li>
+                <li><a href="#">信箱</a></li>
+                <li><a href="#">氣象</a></li>
+                <li><a href="#">ATM</a></li>
+                <li><a href="#">公益</a></li>
+                <li><a href="#">找店+</a></li>
+                <li><a href="#">訂餐廳</a></li>
+                <li><a href="#">帳號保護</a></li>
+                <li><a href="#">全部服務</a></li>
+            </ul>
+            <ul class="ulr">
+                <li><a href="#">拍賣</a></li>
+                <li><a href="#">超級商城</a></li>
+                <li><a href="#">購物中心</a></li>
+                <li><a href="#">生活團購</a></li>
+                <li><a href="#">購划算</a></li>
+                <li><a href="#">汽車機車</a></li>
+                <li><a href="#">中古車</a></li>
+                <li><a href="#">3C科技</a></li>
+                <li><a href="#">時尚美妝</a></li>
+                <li><a href="#">房地產</a></li>
+                <li><a href="#">旅遊</a></li>
+                <li><a href="#">健康</a></li>
+                <li><a href="#">星座算命</a></li>
+                <li><a href="#">APP下載</a></li>
+                <li><a href="#">網路開店</a></li>
+                <li><a href="#">買關鍵字</a></li>
+                <li><a href="#">網路行銷</a></li>
+                <li><a href="#">超贈點</a></li>
+                <li><a href="#">聯名卡</a></li>
+            </ul>
+        </div>
+
+        <div class="main_1">
+
+        </div>
+        <div class="main_2">
+
+        </div>
+        <div class="main_3">
+
+        </div>
+        <div class="right_1">
+
+        </div>
+        <div class="right_2">
+
+        </div>
+        <div class="right_3">
+
+        </div>
+    </div>
 </body>
+
 </html>
