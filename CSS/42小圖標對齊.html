@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小圖標對齊</title>
+    <style>
+        body, ul, li {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .news>li {
+            height: 32px;
+            line-height: 32px;
+        }
+
+        .bg {  /* 背景對齊方式 */
+            background: url(./img/home.png) no-repeat 0 0;
+            padding-left: 32px;
+        }
+
+        .ico {  
+            background: url(./img/home.png) no-repeat 0 0;
+            height: 32px;
+            width: 32px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .fl .bg-img{
+            background: url(./img/home.png) no-repeat 0 0;
+            float: left;
+            height: 32px;
+            width: 32px;
+        }
+        .fl a {
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <ul class="news">
+        <li class="bg"><a href="#">新聞內容</a></li>
+        <li class="itag"><i class="ico"></i> <a href="#">新聞內容</a></li>
+        <li class="fl"><i class="bg-img"></i><a href="#">新聞內容</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css背景案例</title>
+    <style>
+        div {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            width: 120px;
+            height: 60px;
+            line-height: 60px;
+            background-image: url(./img/header.png);
+            background-repeat: no-repeat;
+            padding-left: 60px;
+        }
+        a:hover {
+            background-position: left bottom;  /* 靠左 靠底部對齊 */
+        }
+
+        .bg , .bgg{
+            width: 192px;
+            height: 49px;
+        }
+
+        .bg1,.bg2,.bg3,.bg4 {
+            background-image: url(./img/Yahoo_logo.png);
+            width: 91px;
+            height: 39px;
+        }
+
+        .bg > .bg1 {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bg > .bg2 {
+            float:right;
+            background-position: right top;
+        }
+
+        .bgg > .bg3 {
+            float: left;
+            background-position: left bottom;
+        }
+
+        .bgg > .bg4 {
+            float: right;
+            background-position: right bottom;
+        }
+
+        .sss {
+            background-image: url(./img/QQ.jpg);
+            width: 500px;
+            height: 500px;
+            /* background-position: 50% 5%; */
+            background-position: -300px -100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <a href="#">
+        Yahoo奇摩
+    </a>
+
+    <div class="bg">
+        <div class="bg1">
+        </div>
+        <div class="bg2">
+        </div>
+    </div>
+
+    <div class="bgg">
+        <div class="bg3">
+        </div>
+        <div class="bg4">
+
+        </div>
+    </div>
+
+    <div class="sss">
+
+    </div>
+</body>
+</html>
