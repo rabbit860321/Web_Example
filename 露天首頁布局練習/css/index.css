@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* S 布局的css */
+
+.header {}
+
+
+/* S 白色部分 */
+
+.header .top-nav {
+    background: #eeeeee;
+}
+
+.top-nav-wrap {
+    margin: 0 auto;
+    width: 1120px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.top-nav ul {
+    list-style: none;
+}
+
+.top-nav .left-top {
+    float: left;
+}
+
+.top-nav .right-top {
+    float: right;
+}
+
+.top-nav li {
+    float: left;
+}
+
+.top-nav a {
+    color: #4d4d4d;
+    font: 12px/20px "微軟正黑體";
+    padding: 0 15px;
+}
+
+.top-nav a:hover {
+    text-decoration-line: underline;
+}
+
+
+/* E 白色部分 */
+
+
+/* S 橘色部分 */
+
+.header .site-nav {
+    background-color: #f29100;
+}
+
+.site-nav-wrap {
+    margin: 0 auto;
+    width: 1120px;
+    height: 87px;
+    background-color: #f29100;
+    padding-top: 13px;
+}
+
+
+/* S logo 區域 */
+
+.site-nav .site-nav-wrap .logo {
+    float: left;
+}
+
+.site-nav .logo a {
+    padding-left: 27px;
+    padding-right: 74px;
+}
+
+.site-nav-wrap .logo h1 {
+    position: absolute;
+    text-indent: -99999px;
+}
+
+
+/* E logo 區域 */
+
+
+/* S 搜索框區域 */
+
+.site-nav .site-nav-wrap .search-bar {}
+
+.site-nav-wrap input {
+    width: 650px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1em;
+    border-color: transparent;
+}
+
+
+/* E 搜索框區域 */
+
+
+/* E 橘色部分 */
+
+
+/* E 布局的css */

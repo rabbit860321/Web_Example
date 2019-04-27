@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>三角形的案例</title>
     <style>
-        body , div {
+        body , div , ul{
             padding: 0;
             margin: 0;
         }
@@ -16,11 +16,11 @@
             margin: 100px auto;
         }
 
-        .btn1 {
+        .btn1 ,.btn2{
             position: relative;
             width: 100px;
-            height: 26px;
-            line-height: 26px;
+            height: 36px;
+            line-height: 36px;
             color: #eeeeee;
             text-align: center;
             background-color: #90c;
@@ -39,7 +39,73 @@
             height: 0px;
             border: 9px solid blue;
             border-color: transparent transparent #90c;
-            
+        }
+
+        .btn2::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -17px;
+            display: block;
+            width: 0;
+            height: 0;
+            border: 9px solid #90c;
+            border-color: transparent #90c transparent transparent;
+        }
+
+        .btn ,.btnn{
+            width: 100px;
+            height: 40px;
+            border: 1px solid gray;
+        }
+
+        .btnn {
+            margin-top: 20px;
+        }
+
+        .bubble-s {
+            position: relative;
+        }
+        .bubble-s::before, .bubble-s::after{
+            content: "";
+            position: absolute;
+            top: -18px;
+            left: 40%;
+            display: block;
+            border: 9px solid gray;
+            border-color: transparent transparent gray transparent;
+        }
+
+        .bubble-s::after {
+            top: -17px;
+            display: block;
+            border: 9px solid white;
+            border-color: transparent transparent white transparent;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+
+        .menu li {
+            width: 300px;
+            height: 30px;;
+            line-height: 30px;
+            border: 1px solid gray;
+            overflow: hidden;
+        }
+
+        .menu a {
+            width: 300px;
+            float:left;
+            color: black;
+            text-decoration: none;
+            padding-left: 1em;
+        }
+
+        .menu a:hover {
+            background-color: gray;
         }
     </style>
 </head>
@@ -48,6 +114,30 @@
         <div class="btn1">
             氣泡按鈕
         </div>
+
+        <hr>
+
+        <div class="btn2">
+            氣泡按鈕
+        </div>
+
+        <hr>
+
+        <div class="btn bubble-s">
+            123
+        </div>
+
+        <div class="btnn bubble-s">
+            456
+        </div>
+
+        <ul class="menu bubble-s">
+            <li><a href="#">菜單1</a></li>
+            <li><a href="#">菜單2</a></li>
+            <li><a href="#">菜單3</a></li>
+            <li><a href="#">菜單4</a></li>
+            <li><a href="#">菜單5</a></li>
+        </ul>
     </div>
 </body>
 </html>
