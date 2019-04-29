@@ -1,4 +1,9 @@
 @charset "utf-8";
+a {
+    font: 12px/20px "微軟正黑體";
+    color: #4d4d4d;
+}
+
 
 /* S 布局的css */
 
@@ -35,8 +40,6 @@
 }
 
 .top-nav a {
-    color: #4d4d4d;
-    font: 12px/20px "微軟正黑體";
     padding: 0 15px;
 }
 
@@ -57,7 +60,7 @@
 .site-nav-wrap {
     margin: 0 auto;
     width: 1120px;
-    height: 87px;
+    height: 74px;
     background-color: #f29100;
     padding-top: 13px;
 }
@@ -71,7 +74,6 @@
 
 .site-nav .logo a {
     padding-left: 27px;
-    padding-right: 74px;
 }
 
 .site-nav-wrap .logo h1 {
@@ -85,18 +87,52 @@
 
 /* S 搜索框區域 */
 
-.site-nav .site-nav-wrap .search-bar {}
-
-.site-nav-wrap input {
+.site-nav-wrap .search-bar {
     width: 650px;
     height: 45px;
-    line-height: 45px;
-    padding-left: 1em;
+    margin-left: 184px;
+    position: relative;
+}
+
+.site-nav-wrap input {
+    /* 搜索框 */
+    width: 650px;
+    height: 45px;
     border-color: transparent;
+}
+
+.site-nav-wrap .cursor-sel {
+    /* 商品標題下拉式選單 */
+    position: absolute;
+    left: 515px;
+    top: 5px;
+    display: inline-block;
+    width: 82px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #f5f5f5;
+    padding-left: 14px;
+}
+
+.site-nav-wrap .icon-search {
+    position: absolute;
+    left: 614px;
+    top: 10px;
+    display: inline-block;
+    height: 45px;
+    width: 30px;
+    background: url(../img/images/放大鏡.png) no-repeat;
 }
 
 
 /* E 搜索框區域 */
+
+.site-nav-wrap .user {
+    width: 237px;
+    height: 45px;
+    border: 1px solid black;
+    float: right;
+}
 
 
 /* E 橘色部分 */
