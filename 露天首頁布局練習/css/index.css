@@ -1,13 +1,21 @@
 @charset "utf-8";
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body,
 a {
     font: 12px/20px "微軟正黑體";
     color: #4d4d4d;
 }
 
+ul {
+    list-style: none;
+}
+
 
 /* S 布局的css */
-
-.header {}
 
 
 /* S 白色部分 */
@@ -18,7 +26,7 @@ a {
 
 .top-nav-wrap {
     margin: 0 auto;
-    width: 1120px;
+    width: 1250px;
     height: 35px;
     line-height: 35px;
 }
@@ -40,7 +48,8 @@ a {
 }
 
 .top-nav a {
-    padding: 0 15px;
+    padding-right: 35px;
+    font-size: 13px;
 }
 
 .top-nav a:hover {
@@ -59,10 +68,10 @@ a {
 
 .site-nav-wrap {
     margin: 0 auto;
-    width: 1120px;
-    height: 74px;
+    width: 1250px;
+    height: 82px;
     background-color: #f29100;
-    padding-top: 13px;
+    padding-top: 16px;
 }
 
 
@@ -81,6 +90,10 @@ a {
     text-indent: -99999px;
 }
 
+.logo p {
+    color: white;
+}
+
 
 /* E logo 區域 */
 
@@ -88,23 +101,40 @@ a {
 /* S 搜索框區域 */
 
 .site-nav-wrap .search-bar {
-    width: 650px;
-    height: 45px;
+    width: 725px;
+    height: 50px;
     margin-left: 184px;
     position: relative;
 }
 
+.search-bar ul {
+    margin-top: 5px;
+}
+
+.search-bar ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.search-bar ul li a {
+    color: white;
+}
+
+.search-bar ul li a:hover {
+    text-decoration-line: underline;
+}
+
 .site-nav-wrap input {
     /* 搜索框 */
-    width: 650px;
-    height: 45px;
+    width: 725px;
+    height: 50px;
     border-color: transparent;
 }
 
 .site-nav-wrap .cursor-sel {
     /* 商品標題下拉式選單 */
     position: absolute;
-    left: 515px;
+    left: 580px;
     top: 5px;
     display: inline-block;
     width: 82px;
@@ -114,9 +144,46 @@ a {
     padding-left: 14px;
 }
 
+
+/* S 彈出框 */
+
+.site-nav-wrap .cursor-sel .listborder {
+    width: 77px;
+    height: 63px;
+    border: 1px solid #a0a0a0;
+    background-color: white;
+    margin-left: -5px;
+    display: none;
+}
+
+.listborder .cursor-menu li {
+    line-height: 21px;
+    color: black;
+    padding-left: 5px;
+}
+
+.listborder .cursor-menu li:hover {
+    background-color: #0078d7;
+    color: white;
+}
+
+.site-nav-wrap .cursor-sel:hover .listborder {
+    /* 懸停時 顯示列表 */
+    display: block;
+}
+
+
+/* E 彈出框 */
+
+.site-nav-wrap .icon-sel {
+    float: right;
+    margin-top: 14px;
+    margin-right: 20px;
+}
+
 .site-nav-wrap .icon-search {
     position: absolute;
-    left: 614px;
+    left: 680px;
     top: 10px;
     display: inline-block;
     height: 45px;
@@ -127,15 +194,116 @@ a {
 
 /* E 搜索框區域 */
 
+
+/* S 用戶列表 */
+
 .site-nav-wrap .user {
     width: 237px;
     height: 45px;
-    border: 1px solid black;
     float: right;
 }
 
+.site-nav-wrap .user .user-ul li {
+    float: left;
+    width: 57px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    overflow: hidden;
+}
+
+.user-ul li a {
+    color: white;
+}
+
+.user .user-ul .icon-ul-1 {
+    background: url(../img/images/賣東西.png) no-repeat 0 0;
+    background-position: top;
+}
+
+.user .user-ul .icon-ul-2 {
+    background: url(../img/images/我的拍賣.png) no-repeat 0 0;
+    background-position: top;
+}
+
+.user .user-ul .icon-ul-3 {
+    background: url(../img/images/露露通.png) no-repeat 0 0;
+    background-position: top;
+}
+
+.user .user-ul .icon-ul-4 {
+    background: url(../img/images/購物車.png) no-repeat 0 0;
+    background-position: top;
+}
+
+
+/* E 用戶列表 */
+
+
+/* S 賣東西彈出 */
+
+.user .sale {
+    width: 140px;
+    height: 122px;
+    background-color: white;
+    margin-top: 60px;
+    margin-left: -46px;
+}
+
+.sale ul {
+    display: inline-block;
+    width: 127px;
+    height: 108px;
+    margin-left: 6.5px;
+    margin-right: 6.5px;
+}
+
+.sale a {
+    display: inline-block;
+    width: 127px;
+    height: 27px;
+    color: #006ab4;
+}
+
+.sale a:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* E 賣東西彈出 */
+
 
 /* E 橘色部分 */
+
+
+/* S 上方導航欄 */
+
+.top-banner {
+    width: 1120px;
+    height: 27px;
+    margin: 22px auto;
+    border-bottom: 2px solid #ff9900;
+}
+
+.top-banner p {
+    float: left;
+    margin-left: 10px;
+    color: #ff9600;
+    font-size: 16px;
+}
+
+.top-banner .hot-list li {
+    float: left;
+    display: inline-block;
+    width: 71px;
+    height: 24px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+/* E 上方導航欄 */
 
 
 /* E 布局的css */

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>三角形的案例</title>
     <style>
-        body , div , ul{
+        body,
+        div,
+        ul {
             padding: 0;
             margin: 0;
         }
-
-        .main{
+        
+        .main {
             width: 600px;
             margin: 100px auto;
         }
-
-        .btn1 ,.btn2{
+        
+        .btn1,
+        .btn2 {
             position: relative;
             width: 100px;
             height: 36px;
@@ -27,7 +31,7 @@
             border: 1px solid #a3f;
             border-radius: 3px;
         }
-
+        
         .btn1::before {
             /* 為元素必須要加content屬性 */
             content: "";
@@ -40,7 +44,7 @@
             border: 9px solid blue;
             border-color: transparent transparent #90c;
         }
-
+        
         .btn2::before {
             content: "";
             position: absolute;
@@ -52,21 +56,24 @@
             border: 9px solid #90c;
             border-color: transparent #90c transparent transparent;
         }
-
-        .btn ,.btnn{
+        
+        .btn,
+        .btnn {
             width: 100px;
             height: 40px;
             border: 1px solid gray;
         }
-
+        
         .btnn {
             margin-top: 20px;
         }
-
+        
         .bubble-s {
             position: relative;
         }
-        .bubble-s::before, .bubble-s::after{
+        
+        .bubble-s::before,
+        .bubble-s::after {
             content: "";
             position: absolute;
             top: -18px;
@@ -75,40 +82,41 @@
             border: 9px solid gray;
             border-color: transparent transparent gray transparent;
         }
-
+        
         .bubble-s::after {
             top: -17px;
             display: block;
             border: 9px solid white;
             border-color: transparent transparent white transparent;
         }
-
+        
         ul {
             list-style: none;
         }
         
-
         .menu li {
             width: 300px;
-            height: 30px;;
+            height: 30px;
+            ;
             line-height: 30px;
             border: 1px solid gray;
             overflow: hidden;
         }
-
+        
         .menu a {
             width: 300px;
-            float:left;
+            float: left;
             color: black;
             text-decoration: none;
             padding-left: 1em;
         }
-
+        
         .menu a:hover {
             background-color: gray;
         }
     </style>
 </head>
+
 <body>
     <div class="main">
         <div class="btn1">
@@ -140,4 +148,5 @@
         </ul>
     </div>
 </body>
+
 </html>
