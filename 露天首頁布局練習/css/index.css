@@ -1,309 +1,217 @@
 @charset "utf-8";
-div {
-    margin: 0;
-    padding: 0;
+body {
+    font: 12px/12px "微軟正黑體";
 }
 
-body,
-a {
-    font: 12px/20px "微軟正黑體";
-    color: #4d4d4d;
-}
-
-ul {
-    list-style: none;
+.header {
+    height: 136px;
 }
 
 
-/* S 布局的css */
+/* S header白色部分 */
 
-
-/* S 白色部分 */
-
-.header .top-nav {
-    background: #eeeeee;
+.header .w-header {
+    height: 35px;
+    background-color: #eeeeee;
 }
 
-.top-nav-wrap {
-    margin: 0 auto;
+.w-header .w-header-wrap {
     width: 1250px;
     height: 35px;
-    line-height: 35px;
+    margin: 0 auto;
 }
 
-.top-nav ul {
-    list-style: none;
+.w-header-wrap .w-header-left {
+    margin-left: 10px;
 }
 
-.top-nav .left-top {
-    float: left;
+.w-header-wrap .w-header-right {
+    margin-right: 10px;
 }
 
-.top-nav .right-top {
+.w-header-wrap .w-header-right {
     float: right;
 }
 
-.top-nav li {
+.w-header-wrap .w-header-left {
     float: left;
 }
 
-.top-nav a {
-    padding-right: 35px;
-    font-size: 13px;
+.w-header-left li,
+.w-header-right li {
+    float: left;
+    line-height: 35px;
+    margin-right: 35px;
 }
 
-.top-nav a:hover {
+.w-header-left li a,
+.w-header-right li a {
+    color: #545454;
+}
+
+.w-header-left li a:hover,
+.w-header-right li a:hover {
     text-decoration-line: underline;
 }
 
 
-/* E 白色部分 */
+/* E header白色部分 */
 
 
-/* S 橘色部分 */
+/* S header橘色部分 */
 
-.header .site-nav {
-    background-color: #f29100;
+.header .o-header {
+    height: 101px;
+    background-color: #f19200;
 }
 
-.site-nav-wrap {
-    margin: 0 auto;
+.o-header .o-header-wrap {
     width: 1250px;
-    height: 82px;
-    background-color: #f29100;
-    padding-top: 16px;
+    height: 87px;
+    margin: 0 auto;
+    padding-top: 14px;
 }
 
 
-/* S logo 區域 */
+/* S LOGO部分 */
 
-.site-nav .site-nav-wrap .logo {
+.o-header-wrap .logo {
+    width: 143px;
+    height: 78px;
     float: left;
 }
 
-.site-nav .logo a {
-    padding-left: 27px;
-}
-
-.site-nav-wrap .logo h1 {
+.logo h1 {
     position: absolute;
     text-indent: -99999px;
 }
 
-.logo p {
+.logo a {
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    margin-left: 26px;
+    margin-bottom: 15px;
+}
+
+.logo .logo-item {
+    width: 116px;
+    height: 20px;
+    padding-left: 27px;
+    line-height: 20px;
     color: white;
+    background: url(../img/images/臉.png) no-repeat;
 }
 
 
-/* E logo 區域 */
+/* E LOGO部分 */
 
 
-/* S 搜索框區域 */
+/* S 搜索框 */
 
-.site-nav-wrap .search-bar {
+.o-header-wrap .search {
     width: 725px;
-    height: 50px;
-    margin-left: 184px;
+    height: 77px;
+    margin-left: 204px;
     position: relative;
 }
 
-.search-bar ul {
-    margin-top: 5px;
+.search input {
+    width: 725px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 1em;
+    margin-bottom: 14px;
+    border: none;
 }
 
-.search-bar ul li {
+.search .hot li {
     float: left;
-    margin-right: 10px;
 }
 
-.search-bar ul li a {
+.search .hot li a {
     color: white;
+    margin-right: 15px;
 }
 
-.search-bar ul li a:hover {
+.search .hot li a:hover {
     text-decoration-line: underline;
 }
 
-.site-nav-wrap input {
-    /* 搜索框 */
-    width: 725px;
-    height: 50px;
-    border-color: transparent;
-}
-
-.site-nav-wrap .cursor-sel {
-    /* 商品標題下拉式選單 */
+.search .sel {
     position: absolute;
-    left: 580px;
-    top: 5px;
-    display: inline-block;
-    width: 82px;
-    height: 33px;
-    line-height: 33px;
+    width: 107px;
+    height: 36px;
+    border: none;
     background-color: #f5f5f5;
-    padding-left: 14px;
-}
-
-
-/* S 彈出框 */
-
-.site-nav-wrap .cursor-sel .listborder {
-    width: 77px;
-    height: 63px;
-    border: 1px solid #a0a0a0;
-    background-color: white;
-    margin-left: -5px;
-    display: none;
-}
-
-.listborder .cursor-menu li {
-    line-height: 21px;
-    color: black;
+    font-size: 15px;
+    line-height: 36px;
     padding-left: 5px;
+    left: 572px;
+    top: 6px;
 }
 
-.listborder .cursor-menu li:hover {
-    background-color: #0078d7;
-    color: white;
-}
-
-.site-nav-wrap .cursor-sel:hover .listborder {
-    /* 懸停時 顯示列表 */
-    display: block;
-}
-
-
-/* E 彈出框 */
-
-.site-nav-wrap .icon-sel {
-    float: right;
-    margin-top: 14px;
-    margin-right: 20px;
-}
-
-.site-nav-wrap .icon-search {
+.search .searchbtn {
     position: absolute;
-    left: 680px;
-    top: 10px;
-    display: inline-block;
-    height: 45px;
     width: 30px;
-    background: url(../img/images/放大鏡.png) no-repeat;
+    height: 30px;
+    top: 10px;
+    left: 690px;
+    background: url(../img/images/放大鏡.jpg);
 }
 
 
-/* E 搜索框區域 */
+/* E 搜索框 */
 
 
 /* S 用戶列表 */
 
-.site-nav-wrap .user {
-    width: 237px;
-    height: 45px;
+.user {
+    width: 265px;
+    height: 53px;
     float: right;
 }
 
-.site-nav-wrap .user .user-ul li {
+.user .user-item li {
+    width: 66.25px;
+    height: 53px;
     float: left;
-    width: 57px;
-    height: 45px;
-    text-align: center;
+    position: relative;
+}
+
+.user .user-item li a {
+    width: 66.25px;
+    margin-right: 25px;
     color: white;
-    padding-top: 25px;
-    overflow: hidden;
+    position: absolute;
+    top: 35px;
+    left: 10px;
 }
 
-.user-ul li a {
-    color: white;
+.user-item li a:hover {
+    color: #ffe276;
 }
 
-.user .user-ul .icon-ul-1 {
-    background: url(../img/images/賣東西.png) no-repeat 0 0;
-    background-position: top;
+.user-item .user1 {
+    background: url(../img/images/賣東西.png) no-repeat;
 }
 
-.user .user-ul .icon-ul-2 {
-    background: url(../img/images/我的拍賣.png) no-repeat 0 0;
-    background-position: top;
+.user-item .user2 {
+    background: url(../img/images/我的拍賣.jpg) no-repeat;
 }
 
-.user .user-ul .icon-ul-3 {
-    background: url(../img/images/露露通.png) no-repeat 0 0;
-    background-position: top;
+.user-item .user3 {
+    background: url(../img/images/露露通.png) no-repeat;
+    background-position-x: 1em;
 }
 
-.user .user-ul .icon-ul-4 {
-    background: url(../img/images/購物車.png) no-repeat 0 0;
-    background-position: top;
+.user-item .user4 {
+    background: url(../img/images/購物車.png) no-repeat;
+    background-position-x: 1em;
 }
 
 
 /* E 用戶列表 */
 
 
-/* S 賣東西彈出 */
-
-.user .sale {
-    width: 140px;
-    height: 122px;
-    background-color: white;
-    margin-top: 60px;
-    margin-left: -46px;
-}
-
-.sale ul {
-    display: inline-block;
-    width: 127px;
-    height: 108px;
-    margin-left: 6.5px;
-    margin-right: 6.5px;
-}
-
-.sale a {
-    display: inline-block;
-    width: 127px;
-    height: 27px;
-    color: #006ab4;
-}
-
-.sale a:hover {
-    background-color: #f7f7f7;
-}
-
-
-/* E 賣東西彈出 */
-
-
-/* E 橘色部分 */
-
-
-/* S 上方導航欄 */
-
-.top-banner {
-    width: 1120px;
-    height: 27px;
-    margin: 22px auto;
-    border-bottom: 2px solid #ff9900;
-}
-
-.top-banner p {
-    float: left;
-    margin-left: 10px;
-    color: #ff9600;
-    font-size: 16px;
-}
-
-.top-banner .hot-list li {
-    float: left;
-    display: inline-block;
-    width: 71px;
-    height: 24px;
-    border: 1px solid black;
-    text-align: center;
-}
-
-
-/* E 上方導航欄 */
-
-
-/* E 布局的css */
+/* E header橘色部分 *
