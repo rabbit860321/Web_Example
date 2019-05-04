@@ -215,3 +215,176 @@ body {
 
 
 /* E header橘色部分 *
+
+/* S 上方導航 */
+
+.top-banner {
+    width: 1250px;
+    height: 27px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 3px solid #f89900;
+    border-color: transparent transparent #f89900 transparent;
+}
+
+.top-banner .ad-bar {
+    width: 230px;
+    height: 27px;
+    background: url(../img/images/廣告.jpg);
+    float: right;
+}
+
+.top-banner p {
+    display: inline-block;
+    width: 104px;
+    line-height: 27px;
+    margin-left: 10px;
+    float: left;
+    font-size: 16px;
+    color: #ff9803;
+    background: url(../img/images/播放.jpg) no-repeat;
+    background-position-x: 80px;
+}
+
+.top-banner .promo-bar li {
+    width: 80px;
+    height: 27px;
+    line-height: 30px;
+    margin-right: 9px;
+    float: left;
+    text-align: center;
+}
+
+.promo-bar .p1 {
+    background-color: #8176ff;
+}
+
+.promo-bar .p2 {
+    background-color: #00c6ab;
+}
+
+.promo-bar .p3 {
+    background-color: #59ba00;
+}
+
+.promo-bar .p4 {
+    background-color: #e645ff;
+}
+
+.promo-bar .p5 {
+    background-color: #f36902;
+}
+
+.promo-bar .p6 {
+    background-color: #eb3f7c;
+}
+
+.promo-bar .p7 {
+    background-color: #92b009;
+}
+
+.promo-bar .p8 {
+    background-color: #787878;
+}
+
+.promo-bar .p9 {
+    background-color: #3459bc;
+}
+
+.promo-bar .p0 {
+    background-color: #aa2229;
+}
+
+.promo-bar li a {
+    font-size: 15px;
+    color: white;
+}
+
+
+/* E 上方導航 */
+
+
+/* S 主要區域 */
+
+.main {
+    width: 1250px;
+    height: 2102px;
+    margin: 0 auto;
+}
+
+
+/* S 左側列表 */
+
+.main .left-banner {
+    width: 200px;
+    height: 1082px;
+    border: 1px solid #dddddd;
+    border-color: transparent #dddddd #dddddd #dddddd;
+}
+
+.left-banner .hot-area {
+    width: 200px;
+    height: 180px;
+}
+
+.left-banner .hot-area p {
+    display: inline-block;
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #feeba1;
+    border: 1px solid #dddddd;
+    border-color: transparent transparent #dddddd transparent;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.left-banner .hot-area ul li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.hot-area ul li a {
+    color: #868683;
+    font-size: 15px;
+    margin-left: 33px;
+}
+
+.hot-area ul li a span {
+    color: red;
+}
+
+.left-banner .class-menu p {
+    display: inline-block;
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #feeba1;
+    border: 1px solid #dddddd;
+    border-color: #dddddd transparent #dddddd transparent;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.left-banner .class-menu ul {
+    width: 200px;
+    height: 678px;
+    border: 1px dashed #dddddd;
+    border-color: transparent transparent #dddddd transparent;
+}
+
+.class-menu ul li {
+    height: 28.25px;
+    line-height: 28.25px;
+}
+
+.class-menu ul li a {
+    color: #868683;
+    margin-left: 36px;
+}
+
+
+/* E 左側列表 */
+
+
+/* E 主要區域 */
