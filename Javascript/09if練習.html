@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if練習</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(Math.random() * 10);
+        var b = parseInt(Math.random() * 10);
+        console.log("a = ", a);
+        console.log("b = ", b);
+
+        if (a > b) {
+            console.log("a > b");
+        } else if (a == b) {
+            console.log("a = b");
+        } else {
+            console.log("a < b");
+        }
+
+        //------
+
+        var num = parseInt(Math.random() * 7);
+
+        if (a == 6 || a == 7) {
+            console.log("vacation");
+        } else {
+            console.log("work");
+        }
+
+        //-------
+        var userName = null;
+        // userName = "Eric";
+        // userName = "";
+        // userName = undefined;
+        if (userName == null || userName.length == 0) {
+            console.log("error");
+        }
+
+        //--------
+        var x = "123";
+        if (typeof(x) == "string") {
+            console.log(parseInt(x));
+        } else {
+            // console.log(Boolean(x));
+            console.log(!!x);
+        }
+    </script>
+</body>
+
+</html>
