@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函數練習</title>
+</head>
+
+<body>
+    <script>
+        console.log(getWeekName(5));
+        console.log(getWeekName(9));
+        console.log(getWeekName('sss'));
+
+        function getWeekName(x) {
+
+            if (typeof(x) != 'number' || x > 7 || x < 1) {
+                return '不是正常的日期格式';
+            }
+
+            switch (x) {
+                case 1:
+                    return "星期一";
+                    break;
+                case 2:
+                    return "星期二";
+                    break;
+                case 3:
+                    return "星期三";
+                    break;
+                case 4:
+                    return "星期四";
+                    break;
+                case 5:
+                    return "星期五";
+                    break;
+                case 6:
+                    return "星期六";
+                    break;
+                default:
+                    return "星期日";
+            }
+        }
+    </script>
+</body>
+
+</html>
