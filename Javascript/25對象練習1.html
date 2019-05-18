@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>對象練習1</title>
+</head>
+
+<body>
+    <script>
+        var myMath = {
+            PI: 3.1415926,
+            sum: function(n) {
+                var result = 0;
+                for (var i = 1; i <= n; i++) {
+                    result += i;
+                }
+                return result;
+            },
+            factorial: function(n) {
+                var result = 1;
+                for (var i = 1; i <= n; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+        };
+
+        console.log(myMath.PI);
+        console.log(myMath.sum(100));
+        console.log(myMath.factorial(10));
+    </script>
+</body>
+
+</html>

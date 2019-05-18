@@ -43,6 +43,30 @@
                     return "星期日";
             }
         }
+
+        console.log(f(20));
+
+        function f(x) {
+            var f1 = 1;
+            var f2 = 1;
+            var result;
+            for (var i = 3; i <= x; i++) {
+                result = f1 + f2;
+                f1 = f2;
+                f2 = result;
+            }
+            return result;
+        }
+
+        console.log(j(10));
+
+        function j(z) {
+            var num = 1;
+            for (var i = 2; i <= z; i++) {
+                num *= i;
+            }
+            return num;
+        }
     </script>
 </body>
 

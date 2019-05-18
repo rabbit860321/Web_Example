@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>枚舉對象的屬性</title>
+</head>
+
+<body>
+    <script>
+        var t = {};
+
+        t.name = '123';
+        t.age = 10;
+        t.run = function() {
+            console.log("跑步中...");
+        }
+
+        for (var k in t) {
+            // k 相當於屬性名字的變量
+            //1循環 k等於t變量的第一個屬性名    
+            console.log(k);
+            console.log(t[k]);
+            /* 不能用t.k t.k() */
+        }
+    </script>
+</body>
+
+</html>

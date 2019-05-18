@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刪除屬性</title>
+</head>
+
+<body>
+    <script>
+        var t = {}; //t = new Object();
+        t.age = 19;
+        console.log(t.age);
+
+        delete t.age; //刪除t的自訂義age屬性
+
+        console.log(t.age);
+
+        t.name = '123';
+        console.log('name' in t); //判斷name屬性是否為t對象的自訂義屬性
+        delete t.name;
+        console.log('name' in t);
+    </script>
+</body>
+
+</html>

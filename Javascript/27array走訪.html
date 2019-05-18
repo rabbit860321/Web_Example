@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array走訪</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 2, 3, 4, 'bang', true];
+        console.log('length=', a.length);
+        for (var i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }
+        //for in 走訪對象 拿到的是對象的屬性名
+        for (var k in a) { //for in 走訪array k為array的索引
+            console.log(a[k]);
+        }
+    </script>
+</body>
+
+</html>

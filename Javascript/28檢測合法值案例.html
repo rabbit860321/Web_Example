@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>檢測合法值案例</title>
+</head>
+
+<body>
+    <script>
+        var t = [1, 4, 9, 'sss', 3, '2', 2, 3, 2, 1];
+        var rightful = 0, //合法個數
+            illNum = 0; //非法個數
+        for (var i = 0; i < t.length; i++) {
+            if (t[i] === 1 || t[i] === 2 || t[i] === 3) {
+                rightful += 1;
+            } else {
+                illNum += 1;
+            }
+        }
+        console.log("合法", rightful);
+        console.log("非法", illNum);
+    </script>
+</body>
+
+</html>

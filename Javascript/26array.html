@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array</title>
+</head>
+
+<body>
+    <script>
+        var arr = new Array(); /* 創建一個空的array */
+        //console.log(arr);
+
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 'sss';
+        console.log(arr);
+        console.log("length = " + arr.length);
+
+        var arr2 = new Array(4);
+        console.log(arr2);
+        arr2[0] = 'asd';
+        arr2[1] = 1234;
+
+        var arr3 = new Array(1, 2, 3, 'sss', 'asdwqwe', true, [22, 33]);
+        console.log(arr3);
+
+        arr3.length = 3; /* 截斷array */
+        console.log(arr3);
+
+        var a1 = []; //創建一個空array
+        var a2 = [1, 2, 'sss', true, {
+            age: 10
+        }, null, undefined];
+
+        console.log(a2);
+
+        var a3 = [2, , 3];
+        console.log(a3);
+    </script>
+</body>
+
+</html>

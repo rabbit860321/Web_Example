@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sort</title>
+</head>
+
+<body>
+    <script>
+        var compareFun = function(a, b) {
+            return a - b;
+        };
+
+        var m = [3, 20, 10, 9, 11, 12];
+        console.log(m);
+        m.sort();
+        console.log(m);
+
+        // m.sort(compareFun);
+        // console.log(m);
+
+        /* 優化 */
+        m.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(m);
+    </script>
+</body>
+
+</html>

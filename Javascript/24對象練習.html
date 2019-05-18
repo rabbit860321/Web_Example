@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>對象練習</title>
+</head>
+
+<body>
+    <script>
+        var cat = {
+            color: 'red',
+            weight: 20,
+            name: 'kimi',
+            ID: 123,
+            run: function() {
+                console.log(this.name + "正在跑...");
+            },
+            jump: function() {
+                console.log(this.name + "正在跳...");
+            }
+        };
+
+        cat.run();
+        cat.jump();
+
+        for (var k in cat) {
+            console.log(k);
+        }
+    </script>
+</body>
+
+</html>
