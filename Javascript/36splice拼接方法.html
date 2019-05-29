@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>splice</title>
+</head>
+
+<body>
+    <script>
+        //splice()會直接影響array
+        var t = [0, 1, 2, 3, 4, 5];
+
+        t.splice(3); //刪除t array的索引3到最後
+        console.log(t);
+
+        t.splice(0, 2); //刪除t array的索引0到2前一個數
+        console.log(t);
+
+        var x = [0, 1, 2, 3, 4, 5];
+        x.splice(3, 2, 'bang', 'bang'); //從索引3刪除2個數從索引3插入'bang','bang'
+        //0,1,2,'bang','bang',5
+        console.log(x);
+    </script>
+</body>
+
+</html>
