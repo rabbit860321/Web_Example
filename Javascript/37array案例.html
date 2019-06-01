@@ -24,6 +24,47 @@
             arr.push(x[i]);
         }
         console.log(arr);
+
+        /* 求array中最小值 */
+        var t = [90, 8, 34, 2, 39, 87, 22, 10];
+        var min, minIndex;
+        min = t[0];
+        minIndex = 0;
+        for (var k in t) {
+            if (min > t[k]) {
+                min = t[k];
+                minIndex = k;
+            }
+        }
+        console.log("最小值是", min);
+        console.log("索引", minIndex);
+
+        /* 求array平均值 */
+        var arr = [90, 8, 34, 2, 39, 87, 22, 10];
+        var sum = 0;
+        for (var k in arr) {
+            sum += arr[k];
+        }
+        console.log(sum / arr.length);
+
+        /* array排序 */
+        var arr1 = [90, 8, 34, 2, 39, 87, 22, 10];
+        arr1.sort(function(a, b) {
+            return a - b;
+        })
+        console.log(arr1);
+
+        /* 去除array中重複的數 */
+        var arr = [90, 8, 34, 2, 39, 2, 10, 2, 34, 87, 22, 10];
+        var newarr = [];
+        newarr.push(arr[0]); //在newarr尾端壓入arr[0]
+
+        for (var i = 1; i < arr.length; i++) { //走訪arr索引1以後的數
+            if (newarr.indexOf(arr[i]) == -1) { //若newarr無arr[i] 尾端壓入arr[i]
+                newarr.push(arr[i]);
+            }
+        }
+        console.log(newarr);
     </script>
 </body>
 

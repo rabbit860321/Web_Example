@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>複製</title>
+</head>
+
+<body>
+    <script>
+        var a = 9;
+        var b;
+
+        var c = {
+            age: 9
+        }
+        var d;
+
+        b = a; //把a值類型賦值給了b
+        b = 19; //修改了b的值
+        console.log(a); //a=9
+        console.log(b); //b=19
+
+        //如果是引用類型的賦值後操作
+        d = c; //把c引用類型賦值給了d
+        d.age = 22;
+        //因參考同一個類型 
+        console.log(c.age);
+        console.log(d.age);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03</title>
+</head>
+
+<body>
+    <script>
+        function max(a, b) {
+            console.log(arguments); //每個函數內部都可以直接訪問arguments 存放傳遞給函數的參數
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+
+        var t = max(9, 10);
+        console.log(t);
+
+        var m = max(9, 10, 20, 30);
+        console.log(m);
+
+        /* 試做 可接受多個參數的max方法 */
+        function myMax() {
+            if (arguments.length <= 0) { /* 若呼叫函數沒有傳遞參數 return NaN */
+                return NaN;
+            }
+
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+
+            return max;
+        }
+
+        var x = myMax(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        console.log(x);
+        x = myMax(4, 5, 6, 7, 8, 9, 3, 1, 5, 63);
+        console.log(x);
+    </script>
+</body>
+
+</html>

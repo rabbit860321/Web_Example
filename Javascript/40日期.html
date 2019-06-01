@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期</title>
+</head>
+
+<body>
+    <script>
+        var t = new Date();
+        console.log(t.toLocaleString());
+        t = new Date(1000);
+        console.log(t.toLocaleString());
+        t = new Date(1997, 2, 22, 1, 1, 1);
+        console.log(t.toLocaleString());
+        t = new Date('2018-01-01T01:05:03');
+        console.log(t.toLocaleString());
+
+        var today = new Date();
+        console.log("星期", today.getDay());
+        console.log(today.getFullYear(), "年");
+        console.log(today.getHours(), "點");
+        console.log(today.getMonth() + 1, "月");
+        console.log(today.getTime());
+        today.setMonth(10);
+        console.log(today.getMonth());
+
+        var today = new Date();
+        console.log(today.toLocaleString());
+        console.log(today.toLocaleTimeString())
+        console.log(today.toString());
+        console.log(today.toDateString());
+        console.log(today.toISOString());
+
+        console.log(today.getFullYear(), "年", today.getMonth() + 1, "月", today.getDate(), "日");
+    </script>
+</body>
+
+</html>
