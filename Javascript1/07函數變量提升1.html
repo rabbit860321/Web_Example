@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07</title>
+</head>
+
+<body>
+    <script>
+        /* 瀏覽器中全局對象=>window */
+        /*var a = 9;
+
+        function b() {
+            console.log(a);
+        }
+
+        console.log('a' in window);
+        console.log(window.a);
+        console.log(window['a']);
+        console.log(window.b());*/
+
+        // ("a" in window) => true
+        //因在if裡定義了a
+        if (!("a" in window)) {
+            var a = 1;
+        }
+        console.log(a); //und
+    </script>
+</body>
+
+</html>

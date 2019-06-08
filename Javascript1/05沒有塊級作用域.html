@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05</title>
+</head>
+
+<body>
+    <script>
+        function f1() {
+            var t1 = 9;
+
+            for (var i = 0; i < 10; i++) { //i變量在for循環中定義的
+                console.log(i); //java/c/c++/c#
+            }
+
+            console.log(i); //因js沒有塊級作用域,所以可以直接訪問i變量
+        }
+
+        f1(); //x
+        console.log(t1); //x
+    </script>
+</body>
+
+</html>
