@@ -1,0 +1,70 @@
+.header {
+    height: 60px;
+    background-color: #006aa6;
+}
+
+.header .header-wrap {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.header-wrap .header-logo {
+    width: 74px;
+    height: 60px;
+    float: left;
+    background-color: black;
+    background: url(../img/logo.png)
+}
+
+.header-wrap .search {
+    width: 433px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 20px;
+    float: left;
+}
+
+.search input {
+    width: 394px;
+    height: 30px;
+    padding-left: 10px;
+    background-color: #00588a;
+    color: white;
+}
+
+.search button {
+    width: 39px;
+    height: 30px;
+    background: #006aa6;
+    border: 1px solid #00588a;
+    float: right;
+}
+
+.header-wrap .header-nav {
+    width: 342px;
+    height: 60px;
+    float: right;
+}
+
+.header-nav ul {
+    width: 342px;
+    height: 38px;
+    margin-top: 12px;
+}
+
+.header-nav ul li {
+    float: left;
+}
+
+.header-nav ul .post {
+    width: 42px;
+    height: 37px;
+    padding-left: 38px;
+    background-color: #3397cf;
+    color: white;
+    line-height: 37px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration-line: none;
+}
