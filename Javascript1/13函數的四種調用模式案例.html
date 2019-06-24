@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 定義按鈕類別 要求按鈕類別的構造函數可以接受參數初始化按鈕的寬度高度座標xy */
+        function Btn(width, height, x, y) {
+            /* 構造函數內部初始化值 */
+            this.width = width;
+            this.height = height;
+            this.px = x;
+            this.py = y;
+        }
+
+        var b = new Btn(100, 100, 30, 30);
+
+        /* -------------- */
+
+        /* 用Math的min方法求數組[2,9,33]最小值 */
+        // var m = Math.min(2, 9, 33);
+        // console.log(m);
+
+        var m = Math.min.apply(null, [2, 9, 33]);
+        console.log(m);
+
+        /* --------------- */
+        /* 把類數組轉換成真正的數組 */
+        var t = {};
+        t[0] = 1;
+        t[1] = true;
+        t[2] = 'yaoren';
+        t.length = 3;
+
+        var k = Array.prototype.slice.call(t, 0);
+        /* 通過一個slice方法可以把類數組轉成真正的數組 */
+        console.log(k);
+
+        /* ---------------- */
+        function Dog() {
+            console.log(this);
+        }
+        Dog(); //window
+        var d = new Dog(); //object
+        Dog.call(null); //window
+    </script>
+</body>
+
+</html>

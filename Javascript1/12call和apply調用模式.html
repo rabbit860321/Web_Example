@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(a, b) {
+            console.log(this);
+            return a + b;
+        }
+
+        sum(1, 2); //this=>window
+
+        var t = {
+            name: 'yaoren'
+        };
+
+        //函數.call()
+        var m = sum.call(t, 2, 3);
+        console.log(m); //5
+
+        //函數.apply()
+        var m2 = sum.apply(t, [1, 2]);
+        console.log(m2) //3
+
+        sum.call(null, 3, 5);
+        sum.call(undefined, 3, 5);
+        sum.call(3, 3, 5);
+    </script>
+</body>
+
+</html>
