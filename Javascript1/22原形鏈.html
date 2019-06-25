@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Dog() { //構造函數聲明
+            this.age = 20;
+        }
+
+        Dog.prototype.weight = 20; //構造函數原形對象上添加屬性weight
+        var m = new Dog();
+
+        console.log(m);
+    </script>
+</body>
+
+</html>

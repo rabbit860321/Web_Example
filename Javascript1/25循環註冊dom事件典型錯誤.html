@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        /* 從文檔結構中獲取所有的li標籤 */
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+
+        // /* 循環註冊事件的index的典型錯誤 */
+        // for (var i = 0; i < lis.length; i++) {
+        //     lis[i].onclick = function(e) {  
+        //         /* 變量i是父函數裡的變量 */
+        //         console.log(i); //把當前索引i的值打印出來
+        //     };
+        // }
+        // // i = 5
+
+        /* 把循環註冊事件作成自執行函數來傳遞變量i */
+        for (var i = 0; i < lis.length; i++) {
+            (function(a) {
+                lis[a].onclick = function(e) {
+                    console.log(a);
+                };
+            })(i);
+        }
+    </script>
+</body>
+
+</html>

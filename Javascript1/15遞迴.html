@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 1~100的合 */
+        var sum = 0
+        n = 100;
+        for (var i = 1; i <= n; i++) {
+            sum += i;
+        }
+        console.log(sum);
+
+        /* 利用遞迴 */
+        function sumNum(num) {
+            if (num <= 1) {
+                return num;
+            }
+            return sumNum(num - 1) + num;
+        }
+
+        console.log(sumNum(100));
+
+        /* 階層 */
+        function fact(num) {
+            if (num == 1) {
+                return 1;
+            }
+            return num * fact(num - 1);
+        }
+
+        console.log(fact(10));
+
+        /* f(n) */
+        function f(n) {
+            if (n == 0 || n == 1) {
+                return n;
+            }
+            return f(n - 1) + f(n - 2);
+        }
+
+        console.log(f(6));
+    </script>
+</body>
+
+</html>

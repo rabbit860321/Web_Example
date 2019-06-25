@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var t = [1, 3, 6, 8, 34, 45];
+        for (var i in t) {
+            console.log(t[i]);
+        }
+
+        /* 對每個元素都進行*2 */
+        var m = t.map(function(item, index, array) {
+            /* item 當前值 */
+            /* index 當前索引 */
+            return item * 2;
+        });
+
+        console.log(t);
+        console.log(m);
+    </script>
+</body>
+
+</html>

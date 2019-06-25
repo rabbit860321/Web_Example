@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 數組的清零 */
+        var a = [1, 2, 3, 4, 5, 6, 7];
+
+        a.forEach(function(item) {
+            console.log(item);
+        });
+
+        /* 數組清零 讓gc盡快的回收a陣列的內存空間 */
+        // a = null; //把a轉成null類型
+        // a = []; //確實讓a變量成了一個空陣列 但是在內存重新申請了一個空陣列空間
+        a.length = 0; //該方法最佳
+
+
+        /* 物件複用 */
+        var t = {};
+        for (var i = 10; i < 10; i++) {
+            // var t = {};  //每次循環都會創建一個空物件
+            t.age = 19;
+            t.name = '123';
+            t.index = i;
+        }
+
+        t = null; //物件如果已經不用 那就設置成null 等待回收
+    </script>
+</body>
+
+</html>

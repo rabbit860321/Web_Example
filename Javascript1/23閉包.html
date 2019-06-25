@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 定義了一個外層的函數 */
+        function foo(x) {
+            var tmp = 3; /* 定義了一個局部的變量 tmp */
+
+            return function(y) { /* 把一個函數作為返回值返回 */
+                console.log(x + y + (++tmp)); /* y tmp x bar */
+            };
+        }
+
+        /* 調用foo方法執行 並把返回的函數給了 bar變量 */
+        var bar = foo(2);
+        /* 此時bar指向了 匿名函數 
+        bar 是一個閉包: 函數 + x tmp*/
+        bar(10); /* x 與 tmp不會被釋放 */
+        bar(20);
+    </script>
+</body>
+
+</html>
