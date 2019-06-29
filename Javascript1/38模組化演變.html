@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo() {
+            var a = b = c = 9; /* a享受了ver關鍵字 b c 不享受 */
+            /* 如變量沒聲明直接拿來用 = 全局變量 */
+        }
+
+        demo();
+        // console.log(a);
+        console.log(b);
+        console.log(c);
+
+        /* a.js */
+        var Shop = {}; //頂層命名空間
+        Shop.User = {}; //電商的用戶模組
+        Shop.User.UserList = {}; //用戶列表頁面模組
+        Shop.User.UserList.length = 19; //用戶一共有19個
+
+        /* b.js */
+        Shop.User.UserDetial = {};
+        Shop.User.UserDetial.length = 20;
+
+        console.log(Show.User.UserDetial.length);
+        console.log(Show.UserList.length);
+
+        /* --------------------------- */
+
+        /* a.js */
+        (function() {
+            var a = 9;
+        })();
+
+        /* b.js */
+        (function() {
+            var a = 'sss';
+        })();
+
+        /* --------------------------- */
+    </script>
+</body>
+
+</html>

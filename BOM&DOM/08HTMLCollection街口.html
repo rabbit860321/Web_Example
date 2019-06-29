@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>z1z</p>
+    <p name="p2">z2z</p>
+    <p>z3z</p>
+    <div class="p1">-1</div>
+    <div class="p2">-2</div>
+    <div class="p3">-3</div>
+
+    <script>
+        /* 把所有標籤抓出來 */
+        var all = document.getElementsByTagName('*');
+        // all => HTMLCollection
+
+        console.log(all);
+        console.log(all[0]);
+        console.log(all.item(1));
+        console.log(all["p2"]);
+        console.log(all.namedItem("p2"));
+    </script>
+</body>
+
+</html>

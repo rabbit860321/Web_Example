@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* o = > 借用的對象 */
+        function Object(o) {
+            function F() {}
+            F.prototype = o; /* 讓空函數的原型指向o對象 */
+            return new F(); /* 創建一個f實例 f的內部原型指向o對象 */
+        }
+
+        var m = {
+            age: 19,
+            name: 'yaoren'
+        }
+
+        var m1 = Object(m);
+
+        console.log(m1.age);
+        console.log(m2.name);
+    </script>
+</body>
+
+</html>

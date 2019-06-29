@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Persion() {
+            var age = 0; /* 私有變量 只能通過getAge setAge來操作age */
+            this.getAge = function() {
+                return age;
+            }
+
+            this.setAge = function(a) {
+                age = a;
+            }
+        }
+
+        var p = new Persion();
+        p.setAge(90);
+        console.log(p.getAge());
+
+        /* 第二種方法 */
+        function Persion() {
+            var age = 0;
+
+            return {
+                getAge: function() {
+                    return age;
+                },
+                setAge: function(a) {
+                    age = a;
+                }
+            }
+        }
+
+        var p = new Persion();
+        p.setAge(20);
+        console.log(p.getAge());
+    </script>
+</body>
+
+</html>

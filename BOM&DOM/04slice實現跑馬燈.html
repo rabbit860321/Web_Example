@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1234567</title>
+</head>
+
+<body>
+    <script>
+        var intervalID = setInterval(function() {
+            var oldTitle = document.title;
+            /* .slice(start,end) */
+            var lastChar = oldTitle.slice(oldTitle.length - 1); //'7'
+
+            var beforeStr = oldTitle.slice(0, oldTitle.length - 1) //'123456'
+
+            document.title = lastChar + beforeStr;
+        }, 500);
+
+        /* 5秒後停止跑馬燈 */
+        setTimeout(function() {
+            clearInterval(intervalID);
+        }, 5000);
+    </script>
+</body>
+
+</html>

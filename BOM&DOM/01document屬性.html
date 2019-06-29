@@ -5,22 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Document屬性</title>
 </head>
 
 <body>
     <script>
-        var t = function(a) {
-            console.log(a);
-        }
+        /* 當前URL */
+        console.log(document.URL);
 
-        t(9);
-        /* 盡量少定義全局變量 */
+        /* title標籤內容 */
+        document.title = "BANG"
+        console.log(document.title);
 
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
+        /* 編碼 */
+        console.log(document.characterSet);
     </script>
 </body>
 

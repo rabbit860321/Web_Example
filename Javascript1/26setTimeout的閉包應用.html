@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* bom的一個方法 接受兩個參數 */
+        setTimeout(function() {
+            /* 當1000毫秒後執行function */
+            console.log('sss');
+        }, 1000);
+
+        // for (var i = 0; i < 10; i++) {
+        //     setTimeout(function() {
+        //         console.log(i);
+        //     },1000);
+        // }
+
+        for (var i = 0; i < 10; i++) {
+            (function(a) {
+                setTimeout(function() {
+                    console.log(a);
+                }, 1000);
+            })(i);
+        }
+    </script>
+</body>
+
+</html>

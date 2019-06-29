@@ -9,18 +9,17 @@
 </head>
 
 <body>
+    <p>1..</p>
+    <p class="pp">2..</p>
+    <p class="pp">3..</p>
     <script>
-        var t = function(a) {
-            console.log(a);
-        }
+        var arr = document.querySelectorAll(".pp");
+        //nodelist
+        console.log(arr);
 
-        t(9);
-        /* 盡量少定義全局變量 */
-
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
+        arr.forEach(function(elem, index) {
+            console.log(index + ':' + elem.innerHTML)
+        });
     </script>
 </body>
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Cat() {
+            var o = {};
+            o.age = 10;
+            o.name = 'yaoren';
+            o.run = function() {
+                console.log(run);
+            };
+
+            return o;
+        }
+        /* 使用new 不使用new 創建對象 效果一樣 */
+        var c1 = new Cat(); //構造函數調用模式
+        var c2 = Cat(); //函數調用模式
+    </script>
+</body>
+
+</html>

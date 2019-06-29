@@ -10,17 +10,11 @@
 
 <body>
     <script>
-        var t = function(a) {
-            console.log(a);
-        }
+        /* 創建一個正則表達式對象 \d+ */
+        var exp1 = new RegExp('\\d+', 'g');
 
-        t(9);
-        /* 盡量少定義全局變量 */
-
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
+        console.log(exp1.test('789sssd'));
+        console.log(exp1.test('sssd'));
     </script>
 </body>
 

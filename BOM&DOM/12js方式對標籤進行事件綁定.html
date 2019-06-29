@@ -9,18 +9,15 @@
 </head>
 
 <body>
+    <div id="d1">
+        YAO REN
+    </div>
+
     <script>
-        var t = function(a) {
-            console.log(a);
+        var d = document.querySelector("#d1");
+        d.onclick = function() {
+            alert(this.innerHTML);
         }
-
-        t(9);
-        /* 盡量少定義全局變量 */
-
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
     </script>
 </body>
 

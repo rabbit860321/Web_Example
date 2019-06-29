@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>---跑馬燈---</title>
+</head>
+
+<body>
+    <script>
+        console.log(document.title);
+        console.log(typeof(document.title));
+
+        /* 把string轉換成char陣列 */
+        var chararr = document.title.split("");
+        console.log(chararr);
+        /* 每隔0.5秒 讓title最後一個文字放在title最前面 */
+        setInterval(function() {
+            /* 把array最後一個char彈出 */
+            var lastChar = chararr.pop();
+
+            /* 把最後一個char插入array開頭 */
+            chararr.unshift(lastChar);
+
+            /* 把charArray轉換成String */
+            var newTitle = chararr.join("");
+
+            document.title = newTitle;
+        }, 800);
+    </script>
+</body>
+
+</html>

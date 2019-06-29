@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        
+        .parent {
+            height: 200px;
+            width: 200px;
+            padding: 30px;
+            background-color: beige;
+        }
+        
+        .child {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        父
+        <div class="child">
+            子
+        </div>
+    </div>
+    <script>
+        /* 點擊子元素標籤 父元素綁定的事件也會執行 */
+
+        var p = document.querySelector(".parent");
+        p.onclick = function() {
+            alert("ffffff");
+        };
+
+        window.onclick = function() {
+            alert("wwwwww");
+        };
+    </script>
+</body>
+
+</html>

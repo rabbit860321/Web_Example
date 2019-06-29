@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = {}; //不能重複利用 設置公用屬性的代碼
+
+        /* 工廠模式 創建10個Cat對象 每個對象都有age name屬性 run方法 */
+        function Cat(age, name) {
+            var o = new Object();
+            o.age = age;
+            o.name = name;
+            o.run = function() {
+                console.log(o.name + 'running...');
+            };
+            return o;
+        }
+
+        var c1 = Cat(10, 'bang');
+        //c instanceOf Cat => False
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瀏覽器時鐘</title>
+</head>
+
+<body>
+    <script>
+        // window.setInterval()
+
+        /* setIntervel(fun(),1000); 每隔1秒 執行function */
+        var t = setInterval(function() {
+            // console.log("BANG");
+            console.log(new Date());
+        }, 1000);
+
+        /* setTimeOut(fun(),1000) 延遲5秒執行function一次*/
+        setTimeout(function() {
+            console.log("BANGBANG");
+
+            /* 停止上面的時鐘 */
+            clearInterval(t);
+        }, 5000);
+    </script>
+</body>
+
+</html>

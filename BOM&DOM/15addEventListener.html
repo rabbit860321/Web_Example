@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        
+        .parent {
+            height: 200px;
+            width: 200px;
+            padding: 30px;
+            background-color: beige;
+        }
+        
+        .child {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn" type="button" value="點擊">
+    <div class="parent">
+        父
+        <div class="child">
+            子
+        </div>
+    </div>
+    <script>
+        var btn = document.querySelector("#btn");
+
+        /* btn.addEventListener(事件類型,事件處理程序,是否再捕獲階段執行事件處理程序) */
+        btn.addEventListener('click', function() {
+            alert('BANG');
+        }, false);
+
+        /* 給一個按鈕的點擊事件綁定了兩個事件處理程序 */
+        btn.addEventListener('click', function() {
+            alert("BANGBANG");
+        });
+
+        var pdiv = document.querySelector('.parent');
+        var cdiv = document.querySelector('.child');
+        /* 捕獲階段 */
+        // pdiv.addEventListener('click', function() {
+        //     alert('ffff');
+        // }, true);
+        // cdiv.addEventListener('click', function() {
+        //     alert('cccc');
+        // }, true);
+
+        /* 冒泡階段 */
+        pdiv.addEventListener('click', function() {
+            alert('ffff');
+        }, false);
+        cdiv.addEventListener('click', function() {
+            alert('cccc');
+        }, false);
+    </script>
+</body>
+
+</html>

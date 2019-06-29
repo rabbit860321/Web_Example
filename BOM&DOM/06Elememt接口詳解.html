@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Element</title>
+</head>
+
+<body>
+    <div id="d1" class="dd">
+        <span>B</span>
+        <p>BANG</p>
+    </div>
+    <script>
+        var d1 = document.getElementById('d1');
+        // d1 : HTMLDivElement HTMLElement Element
+
+        /* 獲取所有屬性 */
+        console.log(d1.attributes);
+        console.log(d1.attributes[0]);
+
+        /* d1添加color屬性:black */
+        d1.setAttribute("color", "black");
+        /* d1 get color 屬性值*/
+        console.log(d1.getAttribute("color"));
+        console.log(d1.id);
+        console.log(d1.className);
+
+        /* d1移除color屬性 */
+        d1.removeAttribute('color');
+    </script>
+</body>
+
+</html>

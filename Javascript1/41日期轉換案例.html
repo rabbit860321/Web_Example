@@ -10,17 +10,11 @@
 
 <body>
     <script>
-        var t = function(a) {
-            console.log(a);
-        }
+        var str = '139294563200,mss,Date(1392945632000)';
 
-        t(9);
-        /* 盡量少定義全局變量 */
-
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
+        // console.log(str.replace(/.*(Date\(d+\)).*/g, 'new $1'));
+        var t = eval(str.replace(/.*(Date\(\d+\)).*/g, 'new $1'));
+        console.log(t.toString());
     </script>
 </body>
 

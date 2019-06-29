@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 父類別 */
+        function Animal(name) {
+            this.name = name;
+            this.foods = ['water', 'apple'];
+        }
+
+        Animal.prototype.run = function() {
+            console.log(this.name + ' running');
+        }
+
+        function Cat(name) {
+            Animal.call(this, name);
+            /* 借用父類別的構造函數 給子類創建實例屬性 */
+        }
+
+        Cat.prototype = new Animal();
+        Cat.prototype.constructor = Cat;
+
+        var c = new Cat('bang');
+        console.log(c.name);
+        console.log(c.foods);
+        console.log(c.run());
+    </script>
+</body>
+
+</html>

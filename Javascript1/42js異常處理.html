@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        try {
+            console.log(1);
+            var t = new bang(); //error
+            console.log(2);
+        } catch (e) {
+            //console.dir(e);
+            console.log(e.message);
+        } finally {
+            console.log('finally');
+        }
+
+        alert('bang');
+        console.log(t);
+
+        function add(a, b) {
+            if (typeof(a) != "number") {
+                // throw "非整數";
+
+                // throw new Error('非整數');
+
+                var e = new Error();
+                e.message = '非整數';
+                e.name = 'type error';
+
+                throw e;
+            }
+            return a + b;
+        }
+
+        try {
+            add('s', 55);
+        } catch (e) {
+            console.dir(e);
+        }
+    </script>
+</body>
+
+</html>

@@ -10,17 +10,9 @@
 
 <body>
     <script>
-        var t = function(a) {
-            console.log(a);
-        }
-
-        t(9);
-        /* 盡量少定義全局變量 */
-
-        ;
-        (function(a) {
-            console.log(a);
-        })(4);
+        var str = '12,34,56';
+        var exp = /\d{2}/;
+        console.dir(exp.exec(str));
     </script>
 </body>
 

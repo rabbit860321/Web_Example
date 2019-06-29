@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 父類 */
+        function Animal(name) {
+            this.name = name;
+            this.foods = ['water', 'apple'];
+        }
+        Animal.prototype.run = function() {
+            console.log(this.name + ' running');
+        }
+
+        /* 子類 */
+        function Cat(name) {
+            /* 借用構造函數繼承模式來構建對象的實例屬性 */
+            Animal.call(this, name);
+        }
+        /* 寄生繼承的方法 */
+        function inheritFrom(o) {
+            var t = Object(o);
+            t.constructor = Cat;
+            return t;
+        }
+
+        Cat.prototype = inheritFrom(Animal.prototype);
+
+        var cat1 = new Cat('kitty');
+        cat1.run();
+    </script>
+</body>
+
+</html>

@@ -25,6 +25,13 @@
         bar 是一個閉包: 函數 + x tmp*/
         bar(10); /* x 與 tmp不會被釋放 */
         bar(20);
+
+        function d() {
+            var a = 10;
+            console.log(a);
+        }
+
+        d();
     </script>
 </body>
 
