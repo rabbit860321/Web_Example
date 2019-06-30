@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="點擊" id="btn">
+
+    <script>
+        /* 兼容ie和其他瀏覽器 */
+
+        //DOM0 所有瀏覽器都兼容
+        var btn = document.querySelector("#btn");
+        btn.onclick = function() {
+            alert('ok');
+        };
+
+        /* DOM2兼容ie和其他瀏覽器的處理方法 */
+        if (btn.addEventListener) {
+            btn.addEventListener('click', clickHandler);
+        } else {
+            btn.attachEvent('onclick', clickHandler);
+        }
+
+        function clickHandler() {
+            alert('兼容處理');
+        }
+    </script>
+</body>
+
+</html>

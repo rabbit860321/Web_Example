@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="點擊" id="btn">
+    <script>
+        var btn = document.getElementById('btn');
+
+        /* DOM0 */
+        btn.onclick = function() {
+            alert('DOM0');
+        }
+
+        /* DOM2 */
+        if (btn.addEventListener) {
+            btn.addEventListener('click', function() {
+                alert('DOM2-1');
+            });
+            btn.addEventListener('click', function() {
+                alert('DOM2-2');
+            });
+            btn.addEventListener('click', function() {
+                alert('DOM2-3');
+            });
+        } else {
+            btn.attachEvent('onclick', function() {
+                alert('DOMie-1')
+            })
+            btn.attachEvent('onclick', function() {
+                alert('DOMie-2')
+            })
+            btn.attachEvent('onclick', function() {
+                alert('DOMie-3')
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -17,16 +17,28 @@
     <script>
         var star = document.querySelectorAll('span');
         // console.log(star);
+        // star.forEach(function(elem, index) {
+        //     /* 當該elem被點擊 全設成空心 */
+        //     elem.addEventListener('click', function() {
+        //         star.forEach(function(s, i) {
+        //             s.innerHTML = '✰';
+        //         });
+        //         /* 自己實心 */
+        //         elem.innerHTML = '★';
+        //     });
+        // });
+
         star.forEach(function(elem, index) {
-            /* 當該elem被點擊 全設成空心 */
-            elem.addEventListener('click', function() {
-                star.forEach(function(s, i) {
-                    s.innerHTML = '✰';
-                });
-                /* 自己實心 */
-                elem.innerHTML = '★';
-            });
+            elem.addEventListener('click', starclickHandler);
         });
+
+        function starclickHandler() {
+            star.forEach(function(s, i) {
+                s.innerHTML = '✰';
+            });
+            /* 自己實心 */
+            this.innerHTML = '★';
+        }
     </script>
 </body>
 

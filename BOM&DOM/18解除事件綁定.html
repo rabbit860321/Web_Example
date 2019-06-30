@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="點擊" id="btnClick">
+    <input type="button" value="解除綁定" id="btnRemove">
+    <script>
+        var btn1 = document.querySelector("#btnClick");
+        var btn2 = document.querySelector("#btnRemove");
+
+        btn1.onclick = function() {
+            alert('bang');
+        };
+        btn1.addEventListener('click', btnClickHander);
+
+        btn2.addEventListener('click', function() {
+            /* btn1 DOM0級事件解除綁定 */
+            btn1.onclick = null;
+            /* btn1 DOM2級事件解除綁定 */
+            btn1.removeEventListener('click', btnClickHander);
+        });
+
+
+        function btnClickHander() {
+            alert('bangbang');
+        }
+    </script>
+</body>
+
+</html>
