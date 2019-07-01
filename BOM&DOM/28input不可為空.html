@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://www.google.com">
+        帳號: <input type="text" id="txtName">
+        <hr>
+        <input type="submit" value="送出" id="btn">
+
+        <script>
+            var btn = document.getElementById('btn');
+            var txtName = document.getElementById('txtName');
+
+            // btn.onclick = function(e) {
+            //     /* DOM0 取消默認return false; */
+            //     if (!txtName.value) {
+            //         alert('帳號不可為空');
+            //         return false;
+            //     }
+            // };
+
+            /* DOM2 */
+            if (btn.addEventListener) {
+                /* 標準瀏覽器 */
+                btn.addEventListener('click', btnsubClickHander, false);
+            } else {
+                /* IE */
+                btn.attachEvent('onclick', btnsubClickHander);
+            }
+
+            function btnsubClickHander(e) {
+                e = e || window.event;
+                if (!txtName.value) {
+                    alert('帳號不可為空');
+                    if (e.preventDefault) {
+                        e.preventDefault(); //標準瀏覽器
+                    } else {
+                        e.returnValue = false; //ie8
+                    }
+
+                }
+            }
+        </script>
+    </form>
+</body>
+
+</html>

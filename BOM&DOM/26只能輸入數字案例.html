@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <input type="number">
+    <script>
+        //onKeypress事件: 當鍵盤被按下時會觸發
+        var txt = document.getElementById('txt');
+        txt.onkeypress = function(e) {
+            e = e || window.event;
+
+            // 事件對象中的keyCode就是鍵盤該鍵的ASCII
+            //console.log(e.keyCode); 0=?48 9=>57
+            if (e.keyCode < 48 || e.keyCode > 57) {
+                console.log(e.keyCode);
+                return false; //當鍵盤按下非數字鍵
+            }
+        };
+    </script>
+</body>
+
+</html>
