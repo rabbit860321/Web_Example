@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /* 標準瀏覽器 ie 在文檔加載完成後綁定事件 */
+        // document.addEventListener('DOMContentLoaded', function(e) {
+        //     console.log('DOMContentLoaded');
+        //     var btn = document.getElementById('btn');
+        //     btn.addEventListener('click', function() {
+        //         alert('ok');
+        //     }, false);
+        // }, false);
+
+        // window.onload = function() {
+        //     console.log('window.onload');
+        // };
+
+        // /* ie 加載完成後 */
+        // document.onreadystatechange = function(e) {
+        //     console.log(document.readyState);
+        //     if (document.readyState == "complete") {
+        //         var btn = document.getElementById('btn');
+        //         btn.onclick = function() {
+        //             alert('ok');
+        //         }
+        //     }
+        // }
+
+        document.myReady = function(callback) {
+            /* 封裝標準瀏覽器&IE */
+            if (document.addEventListener) {
+                document.addEventListener('DOMContentLoaded', callback, false);
+            } else if (document.attachEvent) {
+                /* ie */
+                document.attachEvent('onreadystatechange', function() {
+                    if (document.readyState == "interactive") {
+                        callback(window.event);
+                    }
+                });
+            } else {
+                window.onload = callback;
+            }
+        }
+
+        document.myReady(function(e) {
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                alert('ok2');
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按鈕" id="btn">
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="bang">
+    <input type="text" id="txt2" value="bang">
+    <script>
+        window.onload = function() {
+            /* 文本框獲得焦點時 判斷文本框值是否=bang  如果是清空 */
+            var txt2 = document.getElementById('txt2');
+            txt2.style.color = "#ccc";
+            txt2.onfocus = function() {
+                if (txt2.value == "bang") {
+                    txt2.value = "";
+                    txt2.style.color = "black";
+                }
+            };
+            /* 離開焦點 */
+            txt2.onblur = function() {
+                if (txt2.value == "") {
+                    txt2.value = "bang";
+                    txt2.style.color = "#ccc";
+                }
+            };
+        };
+    </script>
+</body>
+
+</html>

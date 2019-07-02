@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        div,
+        ul,
+        li,
+        input {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .search-box-wrap {
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+            padding-top: 30px;
+            position: relative;
+        }
+        
+        .search-box-wrap .list {
+            border: 1px solid gray;
+            width: 198px;
+            display: none;
+            position: absolute;
+        }
+        
+        .search-box-wrap .list li {
+            height: 25px;
+            line-height: 25px;
+            cursor: pointer;
+            padding-left: 5px;
+        }
+        
+        .search-box-wrap .list li:hover {
+            background-color: lightgray;
+        }
+        
+        .txt-search {
+            border-width: 2px;
+            width: 191px;
+            padding-left: 5px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-box-wrap">
+        <input type="text" id="txtsearch" class="txt-search">
+        <ul class="list" id=tiplist>
+            <li>bang1</li>
+            <li>bang2</li>
+            <li>bang3</li>
+            <li>bang4</li>
+            <li>bang5</li>
+        </ul>
+    </div>
+
+    <script>
+        /* 當搜索框獲得焦點 提示框顯示 */
+        (function() {
+            window.onload = function() {
+                var txtsearch = document.getElementById('txtsearch');
+                var tiplist = document.getElementById('tiplist');
+                txtsearch.onfocus = function() {
+                    tiplist.style.display = "block";
+                };
+                txtsearch.onblur = function() {
+                    tiplist.style.display = "none";
+                };
+            }
+
+        })();
+    </script>
+</body>
+
+</html>

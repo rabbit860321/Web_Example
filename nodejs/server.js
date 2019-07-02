@@ -15,3 +15,6 @@ http.createServer(function(request, response) {
 
 // 终端打印如下信息
 console.log('Server running at http://127.0.0.1:8888/');
+
+/* 命令列 node server.js */
+/* 打开浏览器访问 http://127.0.0.1:8888/，你会看到一个写着 "Hello World"的网页。  */
