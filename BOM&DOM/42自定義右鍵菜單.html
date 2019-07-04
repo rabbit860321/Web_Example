@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        h1,
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .menu {
+            border: 1px solid black;
+            position: absolute;
+            background-color: aquamarine;
+            display: none;
+        }
+        
+        .menu li {
+            border: 1px solid black;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .menu li:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hTitle">右鍵我</h1>
+    <ul id="menu" class="menu">
+        <li>bang1</li>
+        <li>bang2</li>
+        <li>bang3</li>
+        <li>bang4</li>
+        <li>bang5</li>
+    </ul>
+
+    <script>
+        (function() {
+            window.onload = function() {
+                var hTitle = document.getElementById('hTitle');
+                var menu = document.getElementById('menu');
+                /* 給h1加一個右鍵點擊的事件 */
+                hTitle.onmousedown = function(e) {
+                    e = e || window.event;
+                    /* 判斷左鍵右鍵 */
+                    if (e.button == 2) {
+                        /* 控制彈出菜單的位置 */
+                        var pageX = e.clientX;
+                        var pageY = e.clientY;
+                        menu.style.left = pageX + 'px';
+                        menu.style.top = pageY + 'px';
+
+                        menu.style.display = "block";
+                    }
+                };
+
+                document.body.onclick = function() {
+                    menu.style.display = 'none';
+                }
+
+                /* 阻止默認的右鍵菜單 */
+                document.oncontextmenu = function(e) {
+                    e = e || window.event;
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+                    return false;
+                };
+            };
+        })();
+    </script>
+</body>
+
+</html>

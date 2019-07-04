@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: absolute;
+            cursor: move;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1" style="left:0px;top:0px"></div>
+
+    <script>
+        (function() {
+            window.onload = function(e) {
+                var div1 = document.getElementById('div1');
+                var isMove = false;
+
+                var tempX = 0,
+                    tempY = 0;
+
+                /* 滑鼠按下 開始移動div */
+                div1.onmousedown = function(e) {
+                    isMove = true;
+                    e = e || window.event;
+                    tempX = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+                    tempY = e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+                };
+
+                /* 滑鼠抬起 停止移動div */
+                div1.onmouseup = function() {
+                    isMove = false;
+                };
+
+                document.onmousemove = function(e) {
+
+                    if (!isMove) {
+                        return;
+                    }
+                    /* 滑鼠對於頁面的x和y座標 */
+                    e = e || window.event;
+                    var pageX = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+                    var pageY = e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+
+                    /* 移動的距離 */
+                    var xH = pageX - tempX;
+                    var yH = pageY - tempY;
+
+                    div1.style.left = (parseFloat(div1.style.left) + xH) + "px";
+                    div1.style.top = (parseFloat(div1.style.top) + yH) + "px";
+                    /* 為滑鼠下一次事件初始化 */
+                    tempX = pageX;
+                    tempY = pageY;
+                };
+            }
+        })();
+    </script>
+</body>
+
+</html>

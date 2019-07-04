@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt1">
+    <input type="button" value="txt1獲得焦點" id="btn">
+
+    <script>
+        window.onload = function() {
+            var txt1 = document.getElementById('txt1');
+            txt1.onfocus = function() {
+                console.log('獲得焦點');
+            };
+            txt1.onblur = function() {
+                console.log('失去焦點');
+            };
+
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                document.getElementById('txt1').focus();
+            };
+        }
+    </script>
+</body>
+
+</html>

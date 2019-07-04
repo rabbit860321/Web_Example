@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        
+        p {
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+
+    <script>
+        (function() {
+            window.onload = function() {
+                var box = document.getElementById('box');
+                box.onmousedown = function() {
+                    console.log('mousedown');
+                };
+                box.onmouseup = function() {
+                    console.log('mouseup');
+                };
+                box.onclick = function() {
+                    console.log('click');
+                };
+            }
+
+            /* 當滑鼠進入元素範圍後 只執行一次 */
+            box.onmouseenter = function() {
+                console.log('enter');
+            };
+
+            /* 當滑鼠離開元素範圍後 只執行一次 */
+            box.onmouseleave = function() {
+                console.log('leave');
+            };
+
+            /* 當滑鼠在元素上面就會觸發 會冒泡 */
+            box.onmouseover = function() {
+                console.log('over');
+            };
+            /* 當滑鼠在離開元素就會觸發 會冒泡 */
+            box.onmouseout = function() {
+                console.log('out');
+            };
+        })();
+    </script>
+</body>
+
+</html>

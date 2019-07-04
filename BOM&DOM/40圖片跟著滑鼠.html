@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="giphy.gif" id="img" width="50" height="50" alt="">
+
+    <script>
+        (function() {
+            window.onload = function() {
+                /* 給整個文黨添加mousemove事件 */
+                document.onmousemove = function(e) {
+                    e = e || window.event;
+                    /* 獲取滑鼠移動的位置在整個頁面的座標 */
+                    var pageX = e.pageX;
+                    var pageY = e.pageY;
+                    var img = document.getElementById('img');
+                    img.style.left = pageX + 'px';
+                    img.style.top = pageY + 'px';
+                };
+            };
+        })();
+    </script>
+</body>
+
+</html>

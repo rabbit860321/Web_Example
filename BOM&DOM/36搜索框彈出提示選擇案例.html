@@ -73,14 +73,25 @@
             window.onload = function() {
                 var txtsearch = document.getElementById('txtsearch');
                 var tiplist = document.getElementById('tiplist');
+                var lilist = tiplist.getElementsByTagName('li'); //通過taplist搜索所有li標籤
                 txtsearch.onfocus = function() {
                     tiplist.style.display = "block";
                 };
                 txtsearch.onblur = function() {
                     tiplist.style.display = "none";
                 };
-            }
 
+                /* 給所有li綁定點擊事件 點擊li 把li文字丟上去 */
+                for (var i = 0; i < lilist.length; i++) {
+                    // lilist[i].onclick = tipLiHandler;
+                    lilist[i].onmousedown = tipLiHandler;
+                }
+
+                function tipLiHandler() {
+                    var txt = this.innerHTML;
+                    txtsearch.value = txt;
+                }
+            };
         })();
     </script>
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <input type="button" value="送出" id="btn">
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+            var txt = document.getElementById('txt');
+            btn.addEventListener('click', function() {
+                if (!txt.value) {
+                    /* 為空 繼續獲得焦點 */
+                    alert("不可為空")
+                    txt.focus();
+                    txt.style.borderColor = "red";
+                } else {
+                    txt.style.borderColor = "";
+                }
+            }, false);
+        }
+    </script>
+</body>
+
+</html>
