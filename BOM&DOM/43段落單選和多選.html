@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .pBox p {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pBox" id="pBox">
+        <p>bang1</p>
+        <p>bang2</p>
+        <p>bang3</p>
+        <p>bang4</p>
+        <p>bang5</p>
+    </div>
+
+    <script>
+        (function() {
+            window.onload = function() {
+                /* 所有p標籤綁定點擊事件 */
+                var pBox = document.getElementById('pBox');
+                var pList = pBox.getElementsByTagName('p');
+                for (var i = 0; i < pList.length; i++) {
+                    pList[i].onclick = pClickHandler;
+                }
+            };
+
+            function pClickHandler(e) {
+                e = e || window.event;
+                /* 判斷是否按下了ctrl */
+                if (e.ctrlKey) {
+                    /* 多選 */
+                    this.style.backgroundColor = 'silver';
+                } else {
+                    /* 單捲 */
+                    var pBox = document.getElementById('pBox');
+                    var pList = pBox.getElementsByTagName('p');
+                    for (var i = 0; i < pList.length; i++) {
+                        pList[i].style.backgroundColor = 'white';
+                    }
+                    this.style.backgroundColor = 'silver';
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
