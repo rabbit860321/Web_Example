@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="menu">
+
+    </ul>
+
+    <script>
+        (function() {
+            var data = [{
+                name: '首頁',
+                url: '/index.html',
+                id: 1
+            }, {
+                name: '關於',
+                url: '/about.html',
+                id: 2
+            }, {
+                name: '產品',
+                url: '/product.html',
+                id: 3
+            }, {
+                name: '案例',
+                url: '/usecase.html',
+                id: 4
+            }, {
+                name: '聯繫',
+                url: '/contact.html',
+                id: 5
+            }];
+            window.onload = function() {
+                /* 動態創建li標籤 */
+                loadMenu();
+            };
+
+            function loadMenu() {
+                var menu = document.getElementById('menu');
+                for (var i = 0; i < data.length; i++) {
+
+                    var liElement = document.createElement('li');
+                    liElement.setAttribute('id', 'menu' + data[i].id);
+
+                    var menuLinkElement = document.createElement('a');
+                    menuLinkElement.setAttribute('href', data[i].url);
+
+                    if (menuLinkElement.textContent) {
+                        menuLinkElement.textContent = data[i].name;
+                    } else {
+                        menuLinkElement.innerText = data[i].name;
+                    }
+
+                    liElement.appendChild(menuLinkElement);
+                    menu.appendChild(liElement);
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

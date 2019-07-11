@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+        <input type="text" id="txt1">
+        <input type="text" id="txt2">
+        <input type="text" id="txt3">
+        <input type="button" value="送出" id="btn">
+    </div>
+
+    <script>
+        (function() {
+            window.onload = function() {
+                var box = document.getElementById('box');
+                var txtList = box.getElementsByTagName('input');
+
+                for (var i = 0; i < txtList.length; i++) {
+                    (function(j) {
+                        if (txtList[j].type == 'text') {
+                            txtList[j].onkeyup = function(e) {
+                                if (this.value.length >= 3) {
+                                    if (j <= 1) {
+                                        txtList[j + 1].focus();
+                                    } else {
+                                        document.getElementById('btn').focus();
+                                    }
+                                }
+                            }
+                        }
+                    })(i);
+                }
+            };
+        })();
+    </script>
+</body>
+
+</html>

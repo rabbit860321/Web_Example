@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+
+    <script>
+        (function() {
+            window.onload = function() {
+                var txt = document.getElementById('txt');
+                txt.onkeydown = function(e) {
+                    e = e || window.event;
+                    console.log('1.keycode:', e.keyCode, 'charcode:', e.charCode);
+                }
+
+                /* 大小寫 */
+                txt.onkeypress = function(e) {
+                    e = e || window.event;
+                    console.log('2.keycode:', e.keyCode, 'charcode:', e.charCode);
+                }
+
+                txt.onkeyup = function(e) {
+                    e = e || window.event;
+                    console.log('3.keycode:', e.keyCode, 'charcode:', e.charCode);
+                }
+            };
+        })()
+    </script>
+</body>
+
+</html>

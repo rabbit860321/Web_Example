@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/documentReady.js"></script>
+    <script src="./js/EventUtil.js"></script>
+</head>
+
+<body>
+    <select name="sel" id="sel">
+
+    </select>
+
+    <script>
+        var data = [{
+            name: '台北',
+            value: 1
+        }, {
+            name: '台中',
+            value: 2
+        }, {
+            name: '台南',
+            value: 3
+        }, {
+            name: '高雄',
+            value: 4
+        }];
+
+        (function() {
+            document.myReady(function() {
+                initsel(data);
+
+                var sel = document.getElementById('sel');
+                EventUtil.addEvent(sel, 'change', function(e) {
+                    var selOpt = this.options[this.selectedIndex];
+                    console.log(selOpt.value);
+                    console.log(selOpt.text);
+                });
+            });
+
+            function initsel(data) {
+                for (var i = 0; i < data.length; i++) {
+                    var sel = document.getElementById('sel');
+                    var opt = document.createElement('option');
+                    opt.value = data[i].value;
+                    opt.text = data[i].name;
+
+                    sel.add(opt, null);
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
