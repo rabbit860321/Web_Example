@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="點我" id="btn">
+
+    <script>
+        // window.onload = function(){
+        //     var btn = document.getElementById('btn');
+        // }
+
+        $(function() {
+            var $btn = $('#btn');
+            /* 一般jQuery的對象會加一個$ */
+            console.log($btn);
+
+            var btn = $btn[0] //jQuery -> DOM
+            console.log(btn);
+
+            var $btn2 = $(btn); //DOM -> jQuery
+            console.log($btn2);
+        })
+    </script>
+</body>
+
+</html>

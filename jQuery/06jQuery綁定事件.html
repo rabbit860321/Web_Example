@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="按鈕" id="btn">
+
+    <script>
+        // window.onload = function() {
+        //     var btn = document.getElementById('btn');
+        //     // dom 0
+        //     btn.onclick = function() {
+        //         console.log('click');
+        //     };
+        //     // dom2
+        //     if (btn.addEventListener) {
+        //         btn.addEventListener('click', function(e) {
+        //             console.log('click');
+        //         }, false);
+        //     }
+        // };
+
+        // jQuery
+        $(function() {
+            $('#btn').click(function(e) { //e = jQuery.fn.event
+                console.log('click');
+                console.log(this.value);
+            });
+            $('#btn').click(function(e) { //e = jQuery.fn.event
+                console.log('click1');
+            });
+            $('#btn').click(function(e) { //e = jQuery.fn.event
+                console.log('click2');
+            });
+        });
+    </script>
+</body>
+
+</html>

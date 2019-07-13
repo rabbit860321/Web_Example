@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" id="btn" value="123">
+    <script>
+        // DOM
+        // window.onload = function() {
+        //     var btn = document.getElementById('btn');
+        //     btn.onclick = function(e) {
+        //         alert(this.value);
+        //     }
+        // }
+
+        /* jQuery佔用了兩個全局變量 $ === jQuery //true */
+        $(function() {
+            /* 頁面加載完成後 自動執行 */
+            alert('ready');
+
+            var btn = document.getElementById('btn');
+            btn.onclick = function(e) {
+                alert(this.value);
+            }
+        }); //$是一個函數對象 jQuery構造函數
+
+        jQuery(function() {
+
+        });
+    </script>
+</body>
+
+</html>

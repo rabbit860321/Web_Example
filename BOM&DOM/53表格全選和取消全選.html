@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        table,
+        thead,
+        tr,
+        th,
+        tbody,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {
+            width: 200px;
+            height: 200px;
+            border: 1px solid grey;
+            background-color: lightgrey;
+        }
+        
+        thead {
+            background-color: gray;
+        }
+        
+        td {
+            border: 1px solid grey;
+            text-align: center;
+        }
+    </style>
+
+    <script src="./js/EventUtil.js"></script>
+    <script src="./js/documentReady.js"></script>
+</head>
+
+<body>
+    <table class="tab" id="tab">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="ckAll" id="ckAll">
+                </th>
+                <th>姓名</th>
+                <th>性別</th>
+                <th>年齡</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    <td>阿明</td>
+                    <td>男</td>
+                    <td>20</td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    <td>小美</td>
+                    <td>女</td>
+                    <td>18</td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    <td>胖虎</td>
+                    <td>男</td>
+                    <td>25</td>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        (function() {
+            document.myReady(function() {
+                var ckAll = document.getElementById('ckAll');
+                EventUtil.addEvent(ckAll, 'click', function(e) {
+                    var inputArray = document.querySelectorAll('#tab tbody tr td:first-child input');
+                    for (var i = 0; i < inputArray.length; i++) {
+                        inputArray[i].checked = this.checked;
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

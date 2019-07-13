@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        table,
+        tr,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid black;
+            width: 300px;
+        }
+        
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>性別</td>
+            <td>年齡</td>
+        </tr>
+        <tr>
+            <td>阿明</td>
+            <td>男</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>小美</td>
+            <td>女</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>胖虎</td>
+            <td>男</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>大熊</td>
+            <td>男</td>
+            <td>22</td>
+        </tr>
+    </table>
+
+    <script>
+        $(function() {
+            /* jQuery可以通過原型上的click方法進行綁定 */
+            $('tr').click(function(e) {
+                // 點擊當前行 背景亮 其他不亮
+                $(this).css('backgroundColor', 'lightgray');
+                $(this).siblings().css('backgroundColor', 'white');
+                // siblings() 除了自己的兄弟節點
+            });
+        });
+    </script>
+</body>
+
+</html>

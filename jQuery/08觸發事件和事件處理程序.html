@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type="button" value="按鈕" id="btn">
+
+    </div>
+
+    <script>
+        $(function() {
+            /* 綁定事件 */
+            $('#btn').click(function(e, a, b) {
+                console.log(e, a, b);
+            });
+            $('div').click(function(e) {
+                console.log('div click');
+            });
+
+            /* 1.觸發事件 */
+            // $('#btn').click(); //觸發點擊事件
+            /* 2.觸發事件 */
+            // $('#btn').trigger('click', ['123', '456']);  //觸發點擊事件
+
+            /* 觸發事件處理程序 不觸發事件本身 */
+            $('#btn').triggerHandler('click', [2, 3]);
+        });
+    </script>
+</body>
+
+</html>

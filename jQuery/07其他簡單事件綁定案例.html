@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+    </div>
+
+    <script>
+        $(function() {
+            $('input').focus(function() {
+                console.log(this.value);
+            });
+
+            $('input').change('123', function(e) {
+                console.log(e);
+                console.log(e.data); //123
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

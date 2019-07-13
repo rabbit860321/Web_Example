@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>縣市選擇</title>
-    <script src="./js/documentReady.js"></script>
-    <script src="./js/EventUtil.js"></script>
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
     <style>
         html,
         body,
@@ -52,11 +51,11 @@
     <div class="box">
         <div class="selbox">
             <select name="city" id="city">
-                        <option value="縣/市">縣/市</option>
-                    </select>
+                                <option value="縣/市">縣/市</option>
+                            </select>
             <select name="area" id="area">
-                        <option value="鄉/鎮">鄉/鎮</option>
-                    </select>
+                                <option value="鄉/鎮">鄉/鎮</option>
+                            </select>
             <p id="txt"></p>
         </div>
     </div>
@@ -129,50 +128,46 @@
             city: "連江縣",
             area: ["南竿鄉", "北竿鄉", "莒光鄉", "東引鄉"]
         }];
-        (function() {
-            document.myReady(function() {
-                initSel();
+        $(function() {
+            // initCity();
 
-                var city = document.getElementById('city');
-                var area = document.getElementById('area');
-                var txt = document.getElementById('txt');
-                var areas;
 
-                EventUtil.addEvent(city, 'change', function(e) {
-                    var cityName = city.value;
+            $('#city').focus(initCity);
 
-                    for (var j = 0; j < data.length; j++) {
-                        if (data[j].city == cityName) {
-                            areas = data[j].area;
-                        }
+            $('#city').change(function() {
+                var city = $('#city').val(); //當前選中的縣市
+                var temp = [];
+
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j].city == city) {
+                        var areas = data[j].area;
                     }
-
-                    area.innerHTML = "";
-                    for (var k = 0; k < areas.length; k++) {
-                        var opt = document.createElement('option');
-                        opt.value = areas[k];
-                        opt.text = areas[k];
-                        area.add(opt, null);
-                    }
-
-                    txt.innerHTML = city.value + area.value;
-                });
-
-                EventUtil.addEvent(area, 'change', function(e) {
-                    txt.innerHTML = city.value + area.value;
-                });
-            })
-
-            function initSel() {
-                var city = document.getElementById('city');
-                for (var i = 0; i < data.length; i++) {
-                    var opt = document.createElement('option');
-                    opt.value = data[i].city;
-                    opt.text = data[i].city;
-                    city.add(opt, null);
                 }
+                for (var k = 0; k < areas.length; k++) {
+                    var areaName = areas[k];
+                    temp.push('<option value="' + areaName + '">' + areaName + '</option>');
+                }
+                $('#area').html(temp.join(''));
+
+                $('#txt').html(city + $('#area').val())
+            });
+
+            $('#area').change(function() {
+                var city = $('#city').val();
+                var area = $('#area').val();
+                $('#txt').html(city + area);
+            })
+        });
+
+        function initCity() {
+            var strHTMLArray = [];
+            for (var i = 0; i < data.length; i++) {
+                var cityName = data[i].city;
+                strHTMLArray.push('<option value="' + cityName + '">' + cityName + '</option>');
             }
-        })();
+
+            $('#city').html(strHTMLArray.join(''));
+        }
     </script>
 </body>
 

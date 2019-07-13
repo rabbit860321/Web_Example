@@ -13,8 +13,20 @@
                     return handler.call(element, window.event);
                 });
             }
+        },
+        getEvent: function(e) {
+            return e || window.event;
+        },
+        getTarget: function(e) {
+            return e.target || e.srcElement;
+        },
+        stopPropagation: function(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                e.cancelBubble = true;
+            }
         }
-    };
-
+    }
     window.EventUtil = EventUtil;
 })(window || {});
