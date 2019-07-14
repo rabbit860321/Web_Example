@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="按鈕" id="btn">
+
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        $(function() {
+            $('#btn').on('click', function(e) {
+                console.log('click');
+            });
+
+            // var domp = document.createElement('p');
+            // domp.innerHTML = '1234';
+            // $(domp).on('click', function(e) {
+            //     console.log($(this).text());
+            // });
+
+            // document.body.appendChild(domp);
+
+            var $p = $('<p>1234</p>');
+            $p.on('click', function(e) {
+                console.log($(this).text());
+            });
+            $("body").append($p);
+
+            /* on 取代delegate */
+            $('.list').on('click', 'li', function(e) {
+                console.log($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>
