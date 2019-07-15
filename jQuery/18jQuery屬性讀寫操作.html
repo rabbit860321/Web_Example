@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <p class="txt" tmd="ss">bang</p>
+        <p class="txt" tmd="ss">bang</p>
+        <input type="checkbox" name="ckb" id="ckb">
+
+        <script>
+            $(function() {
+                /* 讀取屬性 */
+                console.log($('.txt').attr('tmd'));
+
+                /* 寫入屬性 */
+                $('.txt').attr('tmd', '12345');
+                console.log($('.txt').attr('tmd'));
+
+                console.log($('#ckb').attr('checked'));
+
+                /* 同時設置多個鼠性值 */
+                $('p').attr({
+                    mk: '123',
+                    md: '345'
+                });
+
+                $('p').attr('tmd', function(index, oldAttr) {
+                    return oldAttr + index;
+                });
+                console.log($('p'));
+
+                $('#ckb').prop('checked', true);
+                $('#ckb').prop('checked', false);
+            });
+        </script>
+    </body>
+
+</html>

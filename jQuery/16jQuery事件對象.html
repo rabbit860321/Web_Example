@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <p>bangbangbang</p>
+    <input type="text">
+    <script>
+        $(function() {
+            $('p').on('click', function(e) {
+                console.log(e);
+                console.log(e.which);
+            })
+            $('input').on('keydown', function(e) {
+                /* which可以獲得鍵盤鍵 鼠標鍵 */
+                console.log(e.which);
+            });
+            /* 綁定自定義事件 */
+            $('input').on('myevent', function(e) {
+                console.log('自定義事件');
+                console.log($(this).val());
+            });
+
+            /* 觸發自定義事件 */
+            $('input').trigger('myevent');
+        });
+    </script>
+</body>
+
+</html>

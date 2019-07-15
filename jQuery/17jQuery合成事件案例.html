@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <style>
+        .box {
+            position: absolute;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+        
+        .left {
+            height: 200px;
+            width: 100px;
+            float: left;
+        }
+        
+        .box .aside {
+            display: none;
+            width: 100px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="aside"></div>
+    </div>
+
+    <script>
+        $(function() {
+            $('.box').hover(function(e) {
+                // 鼠標移入 aside顯示
+                $('.aside').css('display', 'block');
+            }, function() {
+                /* 鼠標移出 */
+                $('.aside').css('display', 'none');
+            });
+        });
+    </script>
+</body>
+
+</html>

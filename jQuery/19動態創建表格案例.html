@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>姓名</th>
+            <th>生日</th>
+            <th>年齡</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>阿明</td>
+                <td>86.03.21</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var data = [{
+            name: '小美',
+            birthday: '90.06.21',
+            age: 18
+        }, {
+            name: '小美2',
+            birthday: '90.07.21',
+            age: 18
+        }, {
+            name: '小美3',
+            birthday: '90.08.21',
+            age: 18
+        }, {
+            name: '小美4',
+            birthday: '90.09.21',
+            age: 18
+        }, ]
+
+        $(function() {
+            var tempStrArray = [];
+            for (var i = 0; i < data.length; i++) {
+                var tempStr = "";
+                tempStr += "<tr>";
+                tempStr += "<td>" + data[i].name + "</td>";
+                tempStr += "<td>" + data[i].birthday + "</td>";
+                tempStr += "<td>" + data[i].age + "</td>";
+                tempStr += "</tr>";
+                tempStrArray.push(tempStr);
+            }
+
+            $('table tbody').html(tempStrArray.join(''));
+
+            console.log($('table tbody').html());
+        });
+    </script>
+</body>
+
+</html>

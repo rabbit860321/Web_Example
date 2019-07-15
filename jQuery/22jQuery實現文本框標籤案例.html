@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .label-wrap {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            overflow: hidden;
+        }
+        
+        .label-wrap .txt-lb {
+            height: 30px;
+            line-height: 30px;
+            width: 60px;
+            border: none;
+            float: left;
+        }
+        
+        .label-wrap .lb-span {
+            float: left;
+            border: 1px solid lightgray;
+            padding: 0 10px;
+            margin-right: 10px;
+        }
+        
+        .label-wrap .lb-span i {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="label-wrap">
+        <span class="lb-span">jQuery</span>
+        <input type="text" class="txt-lb">
+
+        <script>
+            $(function() {
+                $('.txt-lb').on('keydown', function(e) {
+                    if (e.which == 13) { //enter
+                        var $lb = $('<span class="lb-span">' + $(this).val() + '<i>x</i></span>');
+                        /* 在文本框前建立span標籤 */
+                        $(this).before($lb);
+                        $(this).val('');
+                    } else if (e.which == 8) {
+                        if ($(this).val().length <= 0) {
+                            var txt = $('.label-wrap span:last').text();
+                            $(this).val(txt);
+                            $('.label-wrap span:last').remove();
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+
+</html>

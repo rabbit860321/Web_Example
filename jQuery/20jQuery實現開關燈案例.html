@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <style>
+        .cls {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="關燈" id="btnLight">
+    <script>
+        $(function() {
+            $('#btnLight').on('click', function(e) {
+                if ($(this).val() == '關燈') {
+                    $(this).val('開燈');
+                    $(document.body).addClass('cls');
+                } else {
+                    $(this).val('關燈');
+                    $(document.body).removeClass('cls');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
