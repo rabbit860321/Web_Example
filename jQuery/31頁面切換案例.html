@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .tab-wrap {
+            width: 489px;
+            height: 328px;
+            border-top: 1px solid #dddddd;
+            margin: 0 auto;
+        }
+        
+        .tab-wrap .tab-hd {
+            height: 27px;
+            border-bottom: 1px solid #dddddd;
+            overflow: hidden;
+        }
+        
+        .tab-wrap .tab-hd .tab-hd-item {
+            width: 95.8px;
+            height: 27px;
+            float: left;
+            border-right: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            font-size: 12px;
+            color: #818181;
+            text-align: center;
+            line-height: 27px;
+        }
+        
+        .tab-wrap .tab-hd .tab-hd-item:hover {
+            background-color: #f97d2a;
+            color: white;
+        }
+        
+        .tab-bd {
+            width: 487px;
+            height: 300px;
+            border: 1px solid #dddddd;
+            overflow: hidden;
+        }
+        
+        .tab-bd .tab-bd-item {
+            display: none;
+        }
+        
+        .tab-bd .on {
+            display: block;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="tab-wrap">
+        <ul class="tab-hd">
+            <li class="tab-hd-item">不插電擺放</li>
+            <li class="tab-hd-item">夏食爽吃75折</li>
+            <li class="tab-hd-item">夏季購物節</li>
+            <li class="tab-hd-item">switch lite</li>
+            <li class="tab-hd-item">499折50</li>
+        </ul>
+        <ul class="tab-bd">
+            <li class="tab-bd-item on"><img src="img/img1.jpg" alt=""></li>
+            <li class="tab-bd-item"><img src="img/img2.jpg" alt=""></li>
+            <li class="tab-bd-item"><img src="img/img3.jpg" alt=""></li>
+            <li class="tab-bd-item"><img src="img/img4.jpg" alt=""></li>
+            <li class="tab-bd-item"><img src="img/img5.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function() {
+            $('.tab-hd-item').on('mouseenter', function() {
+                /* 拿到當前滑鼠移入li的索引 */
+                var index = $('.tab-hd-item').index(this);
+                var bdLiDom = $('.tab-bd-item').get(index);
+                $(bdLiDom).addClass('on').siblings().removeClass('on');
+            });
+        });
+    </script>
+</body>
+
+</html>

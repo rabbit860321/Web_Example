@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+
+    <script>
+        $(function() {
+            /* 讓每個p標籤都包裹一個div標籤 */
+            //$('p').wrap('<div></div');
+
+            /* 把所有p標籤用一個div標籤包裹 */
+            // $('p').wrapAll('<div></div>');
+
+            /* 把p標籤的子元素用span標籤包裹 */
+            // $('p').wrapInner('<span></span>');
+
+            /* 替換 */
+            // $('<span>1234</span>').replaceAll('p:first');
+
+            $('p:last').replaceWith('<div>---</div>');
+
+            /* 複製 */
+            $('p:first').clone(true).appendTo($('body'));
+        });
+    </script>
+</body>
+
+</html>

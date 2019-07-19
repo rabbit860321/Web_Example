@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="動畫" id="btn">
+    <input type="button" value="立即結束動畫" id="fin">
+    <input type="button" value="停止動畫" id="btnstop">
+    <div class="box">
+
+    </div>
+
+
+    <script>
+        $(function() {
+            $('#btn').on('click', function() {
+                $('.box')
+                    .hide(1000)
+                    .show(1000)
+                    .slideUp(1000)
+                    .slideDown(1000)
+                    .animate({
+                        width: 200,
+                        height: 200
+                    });
+            });
+
+            $('#fin').on('click', function() {
+                $('.box').finish();
+            });
+
+            $('#btnstop').on('click', function() {
+                /* 指結束當前動畫 後面不受影響 */
+                // $('.box').stop(false);
+
+                // 結束當前動畫 後面也不執行
+                // $('.box').stop(true);
+            });
+        });
+    </script>
+</body>
+
+</html>

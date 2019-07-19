@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display: none;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <input type="button" value="顯示" id="btn">
+    <input type="button" value="slow顯示" id="btnSlow">
+    <input type="button" value="normal顯示" id="btnNormal">
+    <input type="button" value="fast顯示" id="btnFast">
+    <input type="button" value="sec顯示" id="btnSec">
+    <input type="button" value="隱藏" id="btnClr1">
+    <input type="button" value="滑上" id="btnClr2">
+    <input type="button" value="滑下" id="btnClr3">
+    <input type="button" value="滑上/滑下" id="btnClr4">
+    <input type="button" value="淡入" id="btnFadeIn">
+    <input type="button" value="淡出" id="btnFadeOut">
+    <input type="button" value="半透明" id="btnFadeTo">
+
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <script>
+        $(function() {
+            $('#btn').on('click', function() {
+                $('#box1').show();
+            });
+            $('#btnSlow').on('click', function() {
+                $('#box2').show('slow');
+            });
+            $('#btnNormal').on('click', function() {
+                $('#box3').show('normal');
+            });
+            $('#btnFast').on('click', function() {
+                $('#box4').show('fast');
+            });
+            $('#btnSec').on('click', function() {
+                $('#box5').show(5000, function() {
+                    alert('bang');
+                })
+            });
+            $('#btnClr1').on('click', function() {
+                $('.box').hide(1000);
+            });
+            $('#btnClr2').on('click', function() {
+                $('.box').slideUp(1000);
+            });
+            $('#btnClr3').on('click', function() {
+                $('.box').slideDown('slow');
+            });
+            $('#btnClr4').on('click', function() {
+                $('.box').slideToggle();
+            });
+
+            $('#btnFadeIn').on('click', function() {
+                $('.box').fadeIn(2000);
+            });
+            $('#btnFadeOut').on('click', function() {
+                $('.box').fadeOut(2000);
+            });
+            $('#btnFadeTo').on('click', function() {
+                $('.box').fadeTo(1000, 0.5);
+            });
+        });
+    </script>
+</body>
+
+</html>

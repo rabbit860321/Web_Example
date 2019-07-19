@@ -10,24 +10,23 @@
 </head>
 
 <body>
-    <ul class="list">
+    <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
-        <li>5</li>
     </ul>
-
     <script>
-        $(function() {
-            // 事件委託綁定的方式
-            $('.list').delegate('li', 'click', function() {
-                // console.log(this.innerHTML);
-                console.log($(this).text());
-            });
+        var arr = ['a', 'b', 3, , 4];
+        arr.forEach(function(value, index) {
+            console.log('index', index, 'value', value);
         });
 
-        
+        $(function() {
+            $('li').each(function(index, elem) {
+                console.log(index, elem);
+            });
+        });
     </script>
 </body>
 
