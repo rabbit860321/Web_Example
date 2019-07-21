@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        123
+    </div>
+    <script>
+        $(function() {
+            /* 擴展jQuery原型 */
+            (function($) {
+                $.fn.logText = function() {
+                    console.log(this.text());
+                };
+            })(jQuery);
+            $('.box').logText();
+
+            // jQuery.logTime = function() {
+            //     console.log(Date.now().toString);
+            // }
+            $.extend({
+                logTime: function() {
+                    console.log(new Date());
+                }
+            });
+            $.logTime();
+        });
+    </script>
+</body>
+
+</html>

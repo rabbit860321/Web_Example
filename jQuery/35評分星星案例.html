@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+            width: 200px;
+            margin: 0 auto;
+        }
+        
+        li {
+            font-size: 40px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+    <script>
+        $(function() {
+            /* 當滑鼠移入 自己和之前的變成實心 */
+            $('ul li').hover(function() {
+                /* 移入 */
+                $(this).text('★').prevAll().text('★');
+            }, function() {
+                /* 移出 */
+                // $('ul li').text('☆');
+                $(this).text('☆').nextAll().text('☆');
+            }).on('click', function() {
+                /* 點擊之後 紀錄點第幾顆星 */
+                $(this).addClass('cur').siblings().removeClass('cur');
+            });
+
+            $('ul').on('mouseleave', function() {
+                $('ul li.cur').text('★').prevAll().text('★') //前面實心
+                    .end().nextAll().text('☆'); //後面空心
+            });
+        });
+    </script>
+</body>
+
+</html>

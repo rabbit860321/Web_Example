@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            $('.box').text('3333').slideUp(1000).slideDown(1000);
+        });
+
+        var Cat = {
+            run: function() {
+                console.log('running');
+                return this;
+            },
+            sayHi: function() {
+                console.log('hi');
+                return this;
+            }
+        }
+
+        Cat.run().sayHi();
+    </script>
+</body>
+
+</html>

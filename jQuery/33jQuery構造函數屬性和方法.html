@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        $(function() {
+            jQuery.each($('li'), function(index, value) {
+                console.log(index, value);
+            });
+
+            var arr = ['a', 'b', 'c', 'd'];
+            var newArr = arr.map(function(value, index) {
+                return value + index; //a0 b1 c2 d3
+            });
+            console.log(newArr);
+
+            var newArrJQuery = jQuery.map(arr, function(value, index) {
+                console.log(value, index);
+                return value + index;
+            });
+            console.log(newArrJQuery);
+
+            /* jQuery構造函數的繼承 */
+            var target = {
+                name: 'yaoren'
+            };
+            var obj1 = {
+                age: 22,
+                cellphone: '0955295541'
+            };
+
+            var newObj = jQuery.extend(target, obj1);
+            console.log(newObj, target);
+            console.log(newObj === target);
+        });
+    </script>
+</body>
+
+</html>

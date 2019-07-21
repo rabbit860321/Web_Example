@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="lib/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="lib/themes/default/easyui.css">
+    <link rel="stylesheet" href="lib/themes/icon.css">
+</head>
+
+<body>
+    <div class="easyui-tabs" style="width:700px;height:250px">
+        <div title="About" style="padding:10px">
+            1111
+        </div>
+        <div title="My Documents" style="padding:10px">
+            2
+        </div>
+        <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+            3
+            <input type="button" value="彈出對話框" id="btnDialog">
+        </div>
+    </div>
+    <div class="dialog-box easyui-dialog" data-options="iconCls:'icon-save',closed:true,width:400,height:400" title="標題">
+        123
+    </div>
+    <script>
+        $(function() {
+            $('#btnDialog').on('click', function() {
+                $('.dialog-box').dialog({
+                    closed: false,
+                    collapsible: true,
+                    monomozable: true,
+                    resizable: true,
+                    buttons: [{
+                        text: '確定',
+                        iconCls: 'icon-ok',
+                        handler: function() {
+                            console.log('ok');
+                            $('.dialog-box').dialog('close');
+                        }
+                    }]
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

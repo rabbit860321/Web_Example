@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <div id="accordion">
+        <h3>title 1</h3>
+        <div>
+            <img src="img/img1.jpg" alt="">
+        </div>
+        <h3>title 2</h3>
+        <div>
+            <img src="img/img2.jpg" alt="">
+        </div>
+        <h3>title 3</h3>
+        <div>
+            <img src="img/img3.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('#accordion').accordion();
+        })
+    </script>
+</body>
+
+</html>
