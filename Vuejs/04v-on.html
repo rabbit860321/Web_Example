@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <p>您最喜歡的遊戲是:{{mygame}}</p>
+
+        <input type="button" value="極速領域" v-on:click="btnClick('極速領域')">
+        <input type="button" value="傳說對決" v-on:click="btnClick('傳說對決')">
+        <input type="button" value="死人棋" v-on:click="btnClick('死人棋')">
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                mygame: '極速領域'
+            },
+            methods: {
+                btnClick: function(pname) {
+                    this.mygame = pname;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

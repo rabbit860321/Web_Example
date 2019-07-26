@@ -11,15 +11,14 @@
 
 <body>
     <div id="myApp">
-        {{message}} <br> {{test}}
+        <p>你的名字:{{myname}}</p>
+        <input type="text" v-model="myname">
     </div>
-
     <script>
         var myApp = new Vue({
             el: '#myApp',
             data: {
-                message: 'Hello Vue.js World!',
-                test: 'test123'
+                myname: '楊耀仁'
             }
         });
     </script>
