@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <ol>
+            <game-item v-for="item in games" v-bind:game="item"></game-item>
+        </ol>
+    </div>
+
+    <script>
+        /* 定義game-item組件 */
+        Vue.component('game-item', {
+            props: ['game'],
+            template: '<li>{{game.title}}</li>'
+        });
+        /* gmae-item組件遍歷games把值給item 再將item值給game屬性 */
+
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                games: [{
+                    title: '極速領域'
+                }, {
+                    title: '傳說對決'
+                }, {
+                    title: '死人棋'
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>
