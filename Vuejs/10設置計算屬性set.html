@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        ASUS VivoBook S330FN 閃漾金 網路價${{price}} 限時價${{priceonsale}} <br> 8代i5★MX150獨顯★快速512G↘狂殺${{onsale}}
+        <br><input type="button" value="限時價改為$10000" v-on:click="btnClick(10000)">
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                price: 29900
+            },
+            computed: {
+                priceonsale: {
+                    get: function() {
+                        return this.price - 2000;
+                    },
+                    set: function(value) {
+                        this.price = value + 2000;
+                    }
+                },
+                onsale: function() {
+                    return this.price - this.priceonsale;
+                }
+            },
+            methods: {
+                btnClick: function(newPrice) {
+                    this.priceonsale = newPrice;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

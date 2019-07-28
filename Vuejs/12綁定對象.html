@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .colorr {
+            color: red;
+        }
+        
+        .bigg {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myApp">
+        <div v-bind:class="myClass">bang</div>
+        <input type="button" value="改變" v-on:click="btnClick">
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                myClass: {
+                    colorr: true,
+                    bigg: true
+                }
+            },
+            methods: {
+                btnClick: function() {
+                    this.myClass.colorr = !this.myClass.colorr;
+                    this.myClass.bigg = !this.myClass.bigg;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
