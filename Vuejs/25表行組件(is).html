@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <h1>GAME</h1>
+        <table border="1">
+            <tr>
+                <td>編號</td>
+                <td>遊戲名稱</td>
+            </tr>
+            <!-- <my-row1></my-row1>
+            <my-row2></my-row2>
+            <my-row3></my-row3> -->
+
+            <tr is="my-row1"></tr>
+            <tr is="my-row2"></tr>
+            <tr is="my-row3"></tr>
+        </table>
+    </div>
+    <script>
+        Vue.component('my-row1', {
+            template: '<tr><td>(1)</td><td>極速領域</td></tr>'
+        });
+        Vue.component('my-row2', {
+            template: '<tr><td>(2)</td><td>傳說對決</td></tr>'
+        });
+        Vue.component('my-row3', {
+            template: '<tr><td>(3)</td><td>神魔之塔</td></tr>'
+        });
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+
+            }
+        });
+    </script>
+</body>
+
+</html>

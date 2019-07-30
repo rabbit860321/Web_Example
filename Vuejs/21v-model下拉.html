@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <h3>你最愛的手遊:</h3>
+        <select v-model="likedGame">
+            <option>極速領域</option>
+            <option>傳說對決</option>
+            <option>神魔之塔</option>
+        </select>
+
+        <h3>你愛喝的飲料:</h3>
+        <select multiple v-model="likedDrinks">
+            <option>珍珠奶茶</option>
+            <option>阿華田</option>
+            <option>綠茶</option>
+        </select>
+        <hr>
+        <p>我最喜歡玩:{{likedGame}}</p>
+        <p>我最喜歡喝:{{likedDrinks}}</p>
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                likedGame: "",
+                likedDrinks: []
+            }
+        });
+    </script>
+</body>
+
+</html>

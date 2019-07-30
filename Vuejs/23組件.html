@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <today-weather></today-weather>
+    </div>
+    <script>
+        /* 註冊一個組件 */
+        Vue.component('today-weather', {
+            template: '<div>今天天氣如何?</div>'
+        });
+        var myApp = new Vue({
+            el: '#myApp'
+        });
+    </script>
+</body>
+
+</html>

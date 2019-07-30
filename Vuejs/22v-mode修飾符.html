@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <h1>註冊</h1>
+
+        <div>
+            <p>姓名: <input type="text" id="username" v-model.lazy="username" v-on:change="checkUsername">
+                <span v-if="checkUsernameOK">符合</span>
+            </p>
+            <!-- .lazy 發生onchange事件才會存入username -->
+        </div>
+        <div>
+            <p>年齡: <input type="number" id="age" v-model.number="age"></p>
+        </div>
+        <div>
+            <p>地址</p>
+            <textarea id="address" cols="55" rows="8" v-model.trim="address"></textarea>
+        </div>
+
+        <h4>訊息區</h4>
+        <p>{{username}}</p>
+        <p>{{age}}</p>
+        <p>{{address}}</p>
+    </div>
+
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                username: '',
+                age: '',
+                address: '',
+                checkUsernameOK: false
+            },
+            methods: {
+                checkUsername: function() {
+                    if (this.username.length > 0) {
+                        this.checkUsernameOK = true;
+                    } else {
+                        this.checkUsernameOK = false;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

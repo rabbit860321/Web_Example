@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <div v-for="(value,key) in mygame">
+            {{key}} : {{value}}
+        </div>
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                mygame: {
+                    name: "《魔物獵人 世界：Iceborne》中文一般版（附贈預購特典）",
+                    platform: "PlayStation4",
+                    version: "中文代理版 / CAPCOM",
+                    price: 1790
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

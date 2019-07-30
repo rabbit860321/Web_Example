@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <input type="checkbox" value="極速領域" id="極速領域" v-model="checkedGames">
+        <label for="極速領域">極速領域</label>
+        <input type="checkbox" value="傳說對決" id="傳說對決" v-model="checkedGames">
+        <label for="傳說對決">傳說對決</label>
+        <input type="checkbox" value="神魔之塔" id="神魔之塔" v-model="checkedGames">
+        <label for="神魔之塔">神魔之塔</label>
+        <br>
+        <p>{{checkedGames}}</p>
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                checkedGames: []
+            },
+        });
+    </script>
+</body>
+
+</html>
