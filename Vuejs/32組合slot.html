@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <game-all a="神麼之塔" b="龍族拼圖">
+            <span slot="c">傳說對決</span>
+            <span slot="d">刀塔傳奇</span>
+        </game-all>
+    </div>
+
+    <script>
+        Vue.component('game-all', {
+            props: ['a', 'b'],
+            template: '<div>' +
+                '<div>G1:{{a}}</div>' +
+                '<div>G2:{{b}}</div>' +
+                '<div>G3:<slot name="c"></slot></div>' +
+                '<div>G4:<slot name="d"></slot></div>' +
+                '</div>'
+        });
+        var myApp = new Vue({
+            el: '#myApp'
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <say-to pname="bang1">
+            1
+        </say-to>
+        <say-to pname="bang2">
+            2
+        </say-to>
+        <say-to pname="bang3">
+            3
+        </say-to>
+    </div>
+    <script>
+        Vue.component('say-to', {
+            props: ['pname'],
+            template: '<div>' + '{{pname}}' + '<slot></slot>' + '</div>'
+        });
+        var myApp = new Vue({
+            el: '#myApp'
+        })
+    </script>
+</body>
+
+</html>

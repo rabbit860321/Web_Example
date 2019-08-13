@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <h1>身世之謎</h1>
+        <show-member-info name="yaoren" :age="22" :detail="{county:'taiwan',language:'taiwanese'}"></show-member-info>
+        <br>
+        <show-member-info name="yaoren" :age="22"></show-member-info>
+        <br>
+        <!-- <show-member-info :age="22"></show-member-info> -->
+        <!-- <show-member-info name="yaoren" :age="abc"></show-member-info> -->
+        <!-- <show-member-info name="yaoren" :age="200"></show-member-info> -->
+    </div>
+    <script>
+        Vue.component('show-member-info', {
+            props: {
+                name: {
+                    type: String,
+                    required: true, //不可為空
+                },
+                age: {
+                    type: Number,
+                    validator: function(value) {
+                        return value >= 0 && value <= 100;
+                    }
+                },
+                detail: {
+                    type: Object,
+                    default: function() {
+                        return {
+                            county: 'US',
+                            language: 'English',
+                        };
+                    }
+                }
+            },
+            template: '<div>姓名:{{this.name}}<br/>' +
+                '年齡:{{this.age}}歲<br/>' +
+                '國家:{{this.detail.county}}<br/>' +
+                '語言:{{this.detail.language}}</div>'
+        });
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+
+            }
+        });
+    </script>
+</body>
+
+</html>

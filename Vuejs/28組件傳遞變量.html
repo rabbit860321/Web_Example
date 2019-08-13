@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <div> 名字: <input type="text" v-model="myname"></div>
+        <hr>
+        <say-hello :pname="myname"></say-hello>
+    </div>
+    <script>
+        Vue.component('say-hello', {
+            props: ['pname'],
+            template: '<div>你好,<strong>{{pname}}</strong>!</div>'
+        });
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                myname: 'yaoren'
+            }
+        });
+    </script>
+</body>
+
+</html>
