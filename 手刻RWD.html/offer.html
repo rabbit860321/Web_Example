@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+            /* background-color: blue; */
+        }
+        
+        .container:after,
+        .row:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .col {
+            width: 25%;
+            float: left;
+            padding: 0 15px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .offer {
+            /* 位移一欄 */
+            margin-left: 25%;
+        }
+        
+        .offer-2 {
+            margin-left: 50%;
+        }
+        
+        .col:nth-child(odd) .inner {
+            background-color: aqua;
+        }
+        
+        .col+.col:nth-child(even) .inner {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="inner">一般來說入門級智慧機雖然價格較便宜，但硬體規格也相對較弱，不過這並不代表擁有入門機的消費者就只能忍耐較慢的反應速度，其實只要 App 選擇得當，就算是入門級低階機也可以不錯用。像是日前全球開放下載的 Google Go 就是一個很適合入門機的 App，大小只有 7MB 左右，但卻有很多的實用功能。</div>
+            </div>
+            <div class="col  offer">
+                <div class="inner">一般來說入門級智慧機雖然價格較便宜，但硬體規格也相對較弱，不過這並不代表擁有入門機的消費者就只能忍耐較慢的反應速度，其實只要 App 選擇得當，就算是入門級低階機也可以不錯用。像是日前全球開放下載的 Google Go 就是一個很適合入門機的 App，大小只有 7MB 左右，但卻有很多的實用功能。</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col offer">
+                <div class="inner">bang</div>
+            </div>
+            <div class="col offer">
+                <div class="inner">bang</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
