@@ -1,0 +1,19 @@
+body {
+    font-family: source sans pro;
+}
+
+.date {
+    color: #3498db;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+div {
+    width: 33.33%;
+    border: 15px solid #bdc3c7;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
